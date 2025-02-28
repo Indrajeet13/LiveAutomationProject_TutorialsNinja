@@ -115,30 +115,6 @@ public class RegisterPage {
 	@FindBy(xpath = "//input[@id='input-telephone']/following-sibling::div")
 	private WebElement incorrectValidationMessage;
 	
-	@FindBy(xpath = "//i[@class='fa fa-phone']")
-	private WebElement phoneIcon;
-	
-	@FindBy(xpath = "//i[@class='fa fa-heart']")
-	private WebElement heartIconOption;
-	
-	@FindBy(xpath = "//a[@title='Shopping Cart']//i[@class='fa fa-shopping-cart']")
-	private WebElement shoppingCartOption;
-	
-	@FindBy(xpath = "//i[@class='fa fa-share']")
-	private WebElement checkoutOption;
-	
-	@FindBy(linkText = "Qafox.com")
-	private WebElement QAFoxHeading;
-	
-	@FindBy(xpath = "//button[@class='btn btn-default btn-lg']")
-	private WebElement searchButton;
-	
-	@FindBy(xpath = "//a[normalize-space()='Account']")
-	private WebElement accountBreadcrumb;
-	
-	@FindBy(xpath = "//ul[@class='breadcrumb']//i[@class='fa fa-home']")
-	private WebElement homeBreadcrumb;
-	
 	@FindBy(xpath = "//a[normalize-space()='login page']")
 	private WebElement loginPageLinkText;
 	
@@ -149,40 +125,7 @@ public class RegisterPage {
 	private WebElement xButtonAlert;
 	
 	private By xOptionPrivacyPolicy = By.xpath("//button[normalize-space()='×']");
-	
-	@FindBy(xpath = "//a[@class='list-group-item'][text()='Login']")
-	private WebElement loginTextOnRightPanel;
-	
-	@FindBy(linkText = "Forgotten Password")
-	private WebElement forgottenPasswordOnRightPanel;
-	
-	@FindBy(xpath = "//a[@class='list-group-item'][normalize-space()='My Account']")
-	private WebElement myAccountTextOnRightPanel;
-	
-	@FindBy(xpath = "//a[normalize-space()='Address Book']")
-	private WebElement addressBookTextOnRightPanel;
-	
-	@FindBy(xpath = "//a[@class='list-group-item'][normalize-space()='Wish List']")
-	private WebElement wishListTextOnRightPanel;
-	
-	@FindBy(xpath = "//a[normalize-space()='Downloads']")
-	private WebElement downloadsTextOnRightPanel;
-	
-	@FindBy(xpath = "//a[normalize-space()='Recurring payments']")
-	private WebElement recurringPaymentsTextOnRightPanel;
-	
-	@FindBy(xpath = "//a[normalize-space()='Reward Points']")
-	private WebElement rewardPointsTextOnRightPanel;
-	
-	@FindBy(xpath = "//a[@class='list-group-item'][normalize-space()='Returns']")
-	private WebElement returnsTextOnRightPanel;
-	
-	@FindBy(xpath = "//a[normalize-space()='Transactions']")
-	private WebElement transactionsTextOnRightPanel;
-	
-	@FindBy(xpath = "//a[@class='list-group-item'][normalize-space()='Newsletter']")
-	private WebElement newsletterTextOnRightPanel;
-	
+
 	@FindBy(linkText = "About Us")
 	private WebElement aboutUsTextOnBottom;
 	
@@ -191,40 +134,7 @@ public class RegisterPage {
 	
 	@FindBy(linkText = "Brands")
 	private WebElement brandsTextOnBottom;
-	
-	@FindBy(xpath = "//ul[@class='list-unstyled']//a[normalize-space()='My Account']")
-	private WebElement myAccountTextOnBottom;
-	
-	@FindBy(linkText = "Delivery Information")
-	private WebElement deliveryInformationTextOnBottom;
-	
-	@FindBy(xpath = "//a[contains(text(),'Privacy Policy')]")
-	private WebElement privacyPolicyTextOnBottom;
-	
-	@FindBy(linkText = "Terms & Conditions")
-	private WebElement termsConditionTextOnBottom;
-	
-	@FindBy(xpath = "//a[@href='https://tutorialsninja.com/demo/index.php?route=account/return/add'][normalize-space()='Returns']")
-	private WebElement returnsTextOnBottom;
-	
-	@FindBy(linkText = "Site Map")
-	private WebElement siteMapTextOnBottom;
-	
-	@FindBy(linkText = "Gift Certificates")
-	private WebElement giftCertificatesTextOnBottom;
-	
-	@FindBy(linkText = "Affiliate")
-	private WebElement affiliateTextOnBottom;
-	
-	@FindBy(linkText = "Specials")
-	private WebElement specialsTextOnBottom;
-	
-	@FindBy(xpath = "//ul[@class='list-unstyled']//a[normalize-space()='Order History']")
-	private WebElement orderHistoryTextOnBottom;
-	
-	@FindBy(xpath = "//ul[@class='list-unstyled']//a[normalize-space()='Newsletter']")
-	private WebElement newsletterTextOnBottom;
-
+ 
 	@FindBy(xpath = "//ul[@class='breadcrumb']//a[normalize-space()='Register']")
 	private WebElement registerBreadcrumb;
 	
@@ -518,47 +428,7 @@ public class RegisterPage {
 	public String getConfirmPasswordFieldDomAttributeType() {
 		return passwordConfirmField.getDomAttribute("type");
 	}
-	
-	public ContactUsPage selectPhoneIcon() {
-		phoneIcon.click();
-		return new ContactUsPage(driver);
-	}
-	
-	public LoginPage selectHeartIcon() {
-		heartIconOption.click();
-		return new LoginPage(driver);
-	}
-	
-	public ShoppingCartPage selectShoppingCartOption() {
-		shoppingCartOption.click();
-		return new ShoppingCartPage(driver);
-	}
-	
-	public ShoppingCartPage selectCheckoutOption() {
-		checkoutOption.click();
-		return new ShoppingCartPage(driver);
-	}
-	
-	public LandingPage selectQAFoxHeading() {
-		QAFoxHeading.click();
-		return new LandingPage(driver);
-	}
-	
-	public SearchPage clickOnSearchButton() {
-		searchButton.click();
-		return new SearchPage(driver);
-	}
-	
-	public LoginPage clickAccountBreadcrumb() {
-		accountBreadcrumb.click();
-		return new LoginPage(driver);
-	}
-	
-	public LandingPage clickOnHomeBreadcrumb() {
-		homeBreadcrumb.click();
-		return new LandingPage(driver);
-	}
-	
+
 	public LoginPage clickOnLoginPageLinkText() {
 		loginPageLinkText.click();
 		return new LoginPage(driver);
@@ -579,61 +449,6 @@ public class RegisterPage {
 		xButtonAlert.click();	
 	}
 	
-	public LoginPage clickLoginTextOnRightPanel() {
-		loginTextOnRightPanel.click();	
-		return new LoginPage(driver);
-	}
-	
-	public ForgotPasswordPage clickForgottenPasswordTextOnRightPanel() {
-		forgottenPasswordOnRightPanel.click();	
-		return new ForgotPasswordPage(driver);
-	}
-	
-	public LoginPage clickOnMyAccountTextOnRightPanel() {
-		myAccountTextOnRightPanel.click();	
-		return new LoginPage(driver);
-	}
-	
-	public LoginPage clickOnAddressBookTextOnRightPanel() {
-		addressBookTextOnRightPanel.click();	
-		return new LoginPage(driver);
-	}
-	
-	public LoginPage clickOnWishListTextOnRightPanel() {
-		wishListTextOnRightPanel.click();	
-		return new LoginPage(driver);
-	}
-	
-	public LoginPage clickOnDownlodsTextOnRightPanel() {
-		downloadsTextOnRightPanel.click();	
-		return new LoginPage(driver);
-	}
-	
-	public LoginPage clickOnRecurringPaymentsTextOnRightPanel() {
-		recurringPaymentsTextOnRightPanel.click();	
-		return new LoginPage(driver);
-	}
-	
-	public LoginPage clickOnRewardPointsTextOnRightPanel() {
-		rewardPointsTextOnRightPanel.click();	
-		return new LoginPage(driver);
-	}
-	
-	public LoginPage clickOnReturnsTextOnRightPanel() {
-		returnsTextOnRightPanel.click();	
-		return new LoginPage(driver);
-	}
-	
-	public LoginPage clickOnTransactionsTextOnRightPanel() {
-		transactionsTextOnRightPanel.click();	
-		return new LoginPage(driver);
-	}
-	
-	public LoginPage clickOnNewsLetterTextOnRightPanel() {
-		newsletterTextOnRightPanel.click();	
-		return new LoginPage(driver);
-	}
-	
 	public AboutUsPage clickOnAboutUsOnBottom() {
 		aboutUsTextOnBottom.click();	
 		return new AboutUsPage(driver);
@@ -648,72 +463,18 @@ public class RegisterPage {
 		brandsTextOnBottom.click();	
 		return new BrandsPage(driver);
 	}
-	
-	public LoginPage clickOnMyAccountTextOnBottom() {
-		myAccountTextOnBottom.click();	
-		return new LoginPage(driver);
-	}
-	
-	public DeliveryInformationPage clickOnDeliveryInformationTextOnBottom() {
-		deliveryInformationTextOnBottom.click();	
-		return new DeliveryInformationPage(driver);
-	}
-	
-	public PrivacyPolicyPage clickOnPrivacyPolicyTextOnBottom() {
-		privacyPolicyTextOnBottom.click();	
-		return new PrivacyPolicyPage(driver);
-	}
-	
-	public TermsAndConditionPage clickOnTermsAndConditionTextOnBottom() {
-		termsConditionTextOnBottom.click();	
-		return new TermsAndConditionPage(driver);
-	}
-	
-	public ProductReturnsPage clickOnReturnsTextOnBottom() {
-		returnsTextOnBottom.click();	
-		return new ProductReturnsPage(driver);
-	}
-	
-	public SiteMapPage clickOnSiteMapTextOnBottom() {
-		siteMapTextOnBottom.click();	
-		return new SiteMapPage(driver);
-	}
-	
-	public GiftCertificatesPage clickOnGiftCertificatesTextOnBottom() {
-		giftCertificatesTextOnBottom.click();	
-		return new GiftCertificatesPage(driver);
-	}
-	
-	public AffiliateProgramPage clickOnAffiliateTextOnBottom() {
-		affiliateTextOnBottom.click();	
-		return new AffiliateProgramPage(driver);
-	}
-	
-	public SpecialOffersPage clickOnSepcialsTextOnBottom() {
-		specialsTextOnBottom.click();	
-		return new SpecialOffersPage(driver);
-	}
-	
-	public LoginPage clickOnOrderHistoryTextOnBottom() {
-		orderHistoryTextOnBottom.click();	
-		return new LoginPage(driver);
-	}
-	
-	public LoginPage clickOnNewsLetterTextOnBottom() {
-		newsletterTextOnBottom.click();	
-		return new LoginPage(driver);
-	}
-	
+
 	public boolean getRegisterBreadcrumb() {
 		return registerBreadcrumb.isDisplayed();	
 	}
 	
-	public boolean getAccountBreadcrumb() {
-		return accountBreadcrumb.isDisplayed();	
-	}
-	
 	public String getRegisterAccountText() {
 		return registerAccountText.getText();	
+	}
+	
+	public WebDriver getDriverFromRegisterPage(){
+		return driver;
+		
 	}
 	
 }

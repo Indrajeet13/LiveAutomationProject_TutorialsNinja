@@ -48,7 +48,9 @@ public class LoginPage {
 	
 	
 	
-	
+	public WebDriver getDriver() {
+		return driver;
+	}
 	
 	public void clearPassword() {
 		passwordField.clear();
@@ -80,21 +82,26 @@ public class LoginPage {
 		return passwordField.getDomAttribute("type");
 	}
 	
-	public ForgottenPasswordPage clickOnForgottenPassword(){
+	public ForgotPasswordPage clickOnForgottenPassword(){
 		 forgottenPassword.click();
-		 return new ForgottenPasswordPage(driver);
+		 return new ForgotPasswordPage(driver);
 	}
 	
 	public boolean verifyLoginBreadCrumb(){
 		return loginBreaddCrumb.isDisplayed();
 	}
 	
+	public void clickOnLoginBreadCrumb(){
+		loginBreaddCrumb.click();
+	}
+	
 	public boolean verifyNewCustomerHeadingOnLoginPage() {
 		return newCustomerHeading.isDisplayed();
 	}
 	
-	public void clickOnContinueButtonOnLoginPage(){
+	public RegisterPage clickOnContinueButtonOnLoginPage(){
 		continueButton.click();
+		return new RegisterPage(driver);
 	}
 	
 	public void clickOnRegisterOption(){

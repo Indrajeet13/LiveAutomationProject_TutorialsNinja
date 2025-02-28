@@ -1,7 +1,6 @@
 package tutorialsninja.tests;
 
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.util.Properties;
 
 import org.openqa.selenium.Keys;
@@ -11,12 +10,29 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import Pages.AboutUsPage;
 import Pages.AccountLogoutPage;
 import Pages.AccountPage;
+import Pages.AffiliateProgramPage;
+import Pages.BrandsPage;
 import Pages.ChangePasswordPage;
-import Pages.ForgottenPasswordPage;
+import Pages.ContactUsPage;
+import Pages.DeliveryInformationPage;
+import Pages.FooterOptions;
+import Pages.ForgotPasswordPage;
+import Pages.GiftCertificatesPage;
+import Pages.HeaderOptions;
 import Pages.LandingPage;
 import Pages.LoginPage;
+import Pages.PrivacyPolicyPage;
+import Pages.ProductReturnsPage;
+import Pages.RegisterPage;
+import Pages.RightColumnOptions;
+import Pages.SearchPage;
+import Pages.ShoppingCartPage;
+import Pages.SiteMapPage;
+import Pages.SpecialOffersPage;
+import Pages.TermsAndConditionPage;
 import tutorialsninja.base.Base;
 import utils.Utilities;
 
@@ -27,9 +43,26 @@ public class Login extends Base{
 	LandingPage landingPage;
 	LoginPage loginPage;
 	AccountPage accountPage;
-	ForgottenPasswordPage forgotPasswordPage;
 	AccountLogoutPage logoutAccountPage;
 	ChangePasswordPage changePasswordPage ;
+	ContactUsPage contactUsPage;
+	ShoppingCartPage shoppingCart;
+	SearchPage searchPage;
+	RegisterPage registerPage;
+	ForgotPasswordPage forgotPassword;
+	AboutUsPage aboutUsPage;
+	BrandsPage brandsPage;
+	DeliveryInformationPage deliveryInformationPage;
+	PrivacyPolicyPage privacyPolicyPage;
+	TermsAndConditionPage termsAndConditionPage;
+	ProductReturnsPage productReturnsPage;
+	SiteMapPage siteMapPage;
+	GiftCertificatesPage giftCertificatesPage;
+	AffiliateProgramPage affiliateProgramPage;
+	SpecialOffersPage specialOffersPage;
+	HeaderOptions headerOptions;
+	RightColumnOptions rightColumnOptions;
+	FooterOptions footerOptions;
 	
 	@BeforeMethod
 	public void setup() {
@@ -101,8 +134,8 @@ public class Login extends Base{
 	public void verifyForgottenPasswordLinkOnLoginPage()	{
 		
 		Assert.assertTrue(loginPage.verifyLoginBreadCrumb());
-		forgotPasswordPage = loginPage.clickOnForgottenPassword();
-		Assert.assertTrue(forgotPasswordPage.didWeNavigateToForgottenPasswordPage());
+		forgotPassword = loginPage.clickOnForgottenPassword();
+		Assert.assertTrue(forgotPassword.verifyForgotPasswordBreadCrumb());
 	}
 	
 	@Test(priority=7)
@@ -242,6 +275,137 @@ public class Login extends Base{
 		Utilities.setProperties("validPassword1", newPassword);
 		Utilities.setProperties("samplePassword2", oldPassword);
 	}
+	
+	@Test(priority = 17)
+	 public void verifyNavigateToDifferentPagesFromLoginPage() {
+		 
+		loginPage.getDriver();
+		headerOptions = new HeaderOptions(driver);
+		contactUsPage = headerOptions.selectPhoneIcon();
+		Assert.assertTrue(contactUsPage.didWeNavigateToContactUsPage());
+		driver = navigateBack(driver);
+		
+		loginPage.getDriver();
+		headerOptions = new HeaderOptions(driver);
+		loginPage = headerOptions.selectHeartIcon();
+		Assert.assertTrue(loginPage.verifyLoginBreadCrumb());
+		driver = navigateBack(driver);
+		
+		loginPage.getDriver();
+		headerOptions = new HeaderOptions(driver);
+		shoppingCart = headerOptions.selectShoppingCartOption();
+		Assert.assertTrue(shoppingCart.didWeNavigateToShoppingCartPage());
+		driver = navigateBack(driver);
+		
+		loginPage.getDriver();
+		headerOptions = new HeaderOptions(driver);
+		shoppingCart = headerOptions.selectCheckoutOption();
+		Assert.assertTrue(shoppingCart.didWeNavigateToShoppingCartPage());
+		driver = navigateBack(driver);
+		
+		loginPage.getDriver();
+		headerOptions = new HeaderOptions(driver);
+		landingPage = headerOptions.selectQAFoxHeading();
+		Assert.assertEquals(driver.getCurrentUrl(), prop.getProperty("landingPageURL"));
+		Assert.assertTrue(landingPage.isFeaturedHeadingDisplayed());
+		driver = navigateBack(driver);
+
+		loginPage.getDriver();
+		headerOptions = new HeaderOptions(driver);
+		searchPage = headerOptions.clickOnSearchButton();
+		Assert.assertTrue(searchPage.verifySearchText());
+		driver = navigateBack(driver);
+		
+		loginPage.getDriver();
+		headerOptions = new HeaderOptions(driver);
+		loginPage = headerOptions.clickAccountBreadcrumb();
+		Assert.assertTrue(loginPage.verifyNewCustomerHeadingOnLoginPage());
+		driver = navigateBack(driver);
+		
+//		loginPage.getDriver();
+//		headerOptions = new HeaderOptions(driver);
+//		landingPage = headerOptions.clickOnHomeBreadcrumb();
+//		Assert.assertEquals(driver.getCurrentUrl(), prop.getProperty("landingPageURL"));
+//		Assert.assertTrue(landingPage.isFeaturedHeadingDisplayed());
+//		driver = navigateBack(driver);
+		
+		loginPage.getDriver();
+		loginPage.clickOnLoginBreadCrumb();
+		Assert.assertTrue(loginPage.verifyLoginBreadCrumb());
+		
+		loginPage.getDriver();
+		registerPage = loginPage.clickOnContinueButtonOnLoginPage();
+		Assert.assertTrue(registerPage.didWeNavigateToRegisterAccountPage());
+		driver = navigateBack(driver);
+		
+		loginPage.getDriver();
+		forgotPassword = loginPage.clickOnForgottenPassword();
+		Assert.assertTrue(forgotPassword.verifyForgotPasswordBreadCrumb());
+		driver = navigateBack(driver);
+		
+		loginPage.getDriver();
+		headerOptions = new HeaderOptions(driver);
+		rightColumnOptions = new RightColumnOptions(driver);
+		loginPage = rightColumnOptions.clickLoginTextOnRightPanel();
+		Assert.assertTrue(loginPage.verifyNewCustomerHeadingOnLoginPage());
+		driver = navigateBack(driver);
+		
+		loginPage.getDriver();
+		headerOptions = new HeaderOptions(driver);
+		rightColumnOptions = new RightColumnOptions(driver);
+		forgotPassword = rightColumnOptions.clickForgottenPasswordTextOnRightPanel();
+		Assert.assertTrue(forgotPassword.verifyForgotPasswordBreadCrumb());
+		driver = navigateBack(driver);
+		
+		loginPage.getDriver();
+		headerOptions = new HeaderOptions(driver);
+		rightColumnOptions = new RightColumnOptions(driver);
+		loginPage = rightColumnOptions.clickOnMyAccountTextOnRightPanel();
+		Assert.assertTrue(loginPage.verifyLoginBreadCrumb());
+		driver = navigateBack(driver);
+		
+		loginPage.getDriver();
+		headerOptions = new HeaderOptions(driver);
+		rightColumnOptions = new RightColumnOptions(driver);
+		loginPage = rightColumnOptions.clickOnAddressBookTextOnRightPanel();
+		Assert.assertTrue(loginPage.verifyNewCustomerHeadingOnLoginPage());
+		driver = navigateBack(driver);
+
+		loginPage.getDriver();
+		headerOptions = new HeaderOptions(driver);
+		rightColumnOptions = new RightColumnOptions(driver);
+		loginPage = rightColumnOptions.clickOnWishListTextOnRightPanel();
+		Assert.assertTrue(loginPage.verifyLoginBreadCrumb());
+		driver = navigateBack(driver);
+
+		
+		loginPage.getDriver();
+		headerOptions = new HeaderOptions(driver);
+		rightColumnOptions = new RightColumnOptions(driver);
+		loginPage = rightColumnOptions.clickOnDownlodsTextOnRightPanel();
+		Assert.assertTrue(loginPage.verifyLoginBreadCrumb());
+		driver = navigateBack(driver);
+
+		
+		loginPage.getDriver();
+		headerOptions = new HeaderOptions(driver);
+		rightColumnOptions = new RightColumnOptions(driver);
+		loginPage = rightColumnOptions.clickOnRecurringPaymentsTextOnRightPanel();
+		Assert.assertTrue(loginPage.verifyLoginBreadCrumb());
+		driver = navigateBack(driver);
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	 }
+	
 	
 	
 }

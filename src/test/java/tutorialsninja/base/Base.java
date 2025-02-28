@@ -77,4 +77,11 @@ public class Base {
 	public String getHTMLCodeOfPage() {
 		return driver.getPageSource();
 	}
+	
+	public String getPageURL(WebDriver driver) {
+		return driver.getCurrentUrl();
+		
+	}
+	
+	
 }
