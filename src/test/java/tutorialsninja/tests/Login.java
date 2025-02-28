@@ -1,6 +1,7 @@
 package tutorialsninja.tests;
 
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.Properties;
 
 import org.openqa.selenium.Keys;
@@ -343,12 +344,13 @@ public class Login extends Base{
 		Assert.assertTrue(forgotPassword.verifyForgotPasswordBreadCrumb());
 		driver = navigateBack(driver);
 		
+		
 		loginPage.getDriver();
 		headerOptions = new HeaderOptions(driver);
 		rightColumnOptions = new RightColumnOptions(driver);
 		loginPage = rightColumnOptions.clickLoginTextOnRightPanel();
 		Assert.assertTrue(loginPage.verifyNewCustomerHeadingOnLoginPage());
-		driver = navigateBack(driver);
+		driver = navigateToPage_GivenURL(driver, prop.getProperty("loginPageURL"));
 		
 		loginPage.getDriver();
 		headerOptions = new HeaderOptions(driver);
@@ -385,7 +387,7 @@ public class Login extends Base{
 		loginPage = rightColumnOptions.clickOnDownlodsTextOnRightPanel();
 		Assert.assertTrue(loginPage.verifyLoginBreadCrumb());
 		driver = navigateBack(driver);
-
+		
 		
 		loginPage.getDriver();
 		headerOptions = new HeaderOptions(driver);
@@ -394,18 +396,182 @@ public class Login extends Base{
 		Assert.assertTrue(loginPage.verifyLoginBreadCrumb());
 		driver = navigateBack(driver);
 
+		loginPage.getDriver();
+		headerOptions = new HeaderOptions(driver);
+		rightColumnOptions = new RightColumnOptions(driver);
+		loginPage = rightColumnOptions.clickOnRewardPointsTextOnRightPanel();
+		Assert.assertTrue(loginPage.verifyNewCustomerHeadingOnLoginPage());
+		driver = navigateBack(driver);
+
+		loginPage.getDriver();
+		headerOptions = new HeaderOptions(driver);
+		rightColumnOptions = new RightColumnOptions(driver);
+		loginPage = rightColumnOptions.clickOnReturnsTextOnRightPanel();
+		Assert.assertTrue(loginPage.verifyNewCustomerHeadingOnLoginPage());
+		driver = navigateBack(driver);
 		
+		loginPage.getDriver();
+		headerOptions = new HeaderOptions(driver);
+		rightColumnOptions = new RightColumnOptions(driver);
+		loginPage = rightColumnOptions.clickOnTransactionsTextOnRightPanel();
+		Assert.assertTrue(loginPage.verifyNewCustomerHeadingOnLoginPage());
+		driver = navigateBack(driver);
 		
+		loginPage.getDriver();
+		headerOptions = new HeaderOptions(driver);
+		rightColumnOptions = new RightColumnOptions(driver);
+		loginPage = rightColumnOptions.clickOnNewsLetterTextOnRightPanel();
+		Assert.assertTrue(loginPage.verifyNewCustomerHeadingOnLoginPage());
+		driver = navigateBack(driver);
 		
+		loginPage.getDriver();
+		headerOptions = new HeaderOptions(driver);
+		footerOptions = new FooterOptions(driver);
+		aboutUsPage = footerOptions.clickOnAboutUsOnBottom();
+		Assert.assertTrue(aboutUsPage.verifyAboutUsBreadCrumb());
+		driver = navigateBack(driver);
 		
+		loginPage.getDriver();
+		headerOptions = new HeaderOptions(driver);
+		footerOptions = new FooterOptions(driver);
+		contactUsPage = footerOptions.clickOnContactUsOnBottom();
+		Assert.assertTrue(contactUsPage.didWeNavigateToContactUsPage());
+		driver = navigateBack(driver);
 		
+		loginPage.getDriver();
+		headerOptions = new HeaderOptions(driver);
+		footerOptions = new FooterOptions(driver);
+		brandsPage = footerOptions.clickOnBrandsTextOnBottom();
+		Assert.assertTrue(brandsPage.didWeNavigateToBrandsPage());
+		driver = navigateBack(driver);
 		
+		loginPage.getDriver();
+		headerOptions = new HeaderOptions(driver);
+		footerOptions = new FooterOptions(driver);
+		loginPage = footerOptions.clickOnMyAccountTextOnBottom();
+		Assert.assertTrue(loginPage.verifyNewCustomerHeadingOnLoginPage());
+		driver = navigateBack(driver);
 		
+		loginPage.getDriver();
+		headerOptions = new HeaderOptions(driver);
+		footerOptions = new FooterOptions(driver);
+		deliveryInformationPage = footerOptions.clickOnDeliveryInformationTextOnBottom();
+		Assert.assertTrue(deliveryInformationPage.didWeNavigateToDeliveryInformationPage());
+		driver = navigateBack(driver);
 		
+		loginPage.getDriver();
+		headerOptions = new HeaderOptions(driver);
+		footerOptions = new FooterOptions(driver);
+		privacyPolicyPage = footerOptions.clickOnPrivacyPolicyTextOnBottom();
+		Assert.assertTrue(privacyPolicyPage.didWeNavigateToPrivacyPolicyPage());
+		driver = navigateBack(driver);
 		
+		loginPage.getDriver();
+		headerOptions = new HeaderOptions(driver);
+		footerOptions = new FooterOptions(driver);
+		termsAndConditionPage = footerOptions.clickOnTermsAndConditionTextOnBottom();
+		Assert.assertTrue(termsAndConditionPage.didWeNavigateToTermsAndConditionPage());
+		driver = navigateBack(driver);
 		
+		loginPage.getDriver();
+		headerOptions = new HeaderOptions(driver);
+		footerOptions = new FooterOptions(driver);
+		productReturnsPage = footerOptions.clickOnReturnsTextOnBottom();
+		Assert.assertTrue(productReturnsPage.didWeNavigateToProductReturnsPage());
+		driver = navigateBack(driver);
+		
+		loginPage.getDriver();
+		headerOptions = new HeaderOptions(driver);
+		footerOptions = new FooterOptions(driver);
+		siteMapPage = footerOptions.clickOnSiteMapTextOnBottom();
+		Assert.assertTrue(siteMapPage.didWeNavigateToSiteMapPage());
+		driver = navigateBack(driver);
+		
+		loginPage.getDriver();
+		headerOptions = new HeaderOptions(driver);
+		footerOptions = new FooterOptions(driver);
+		giftCertificatesPage = footerOptions.clickOnGiftCertificatesTextOnBottom();
+		Assert.assertTrue(giftCertificatesPage.didWeNavigateToGiftCertificatesPage());
+		driver = navigateBack(driver);
+		
+		loginPage.getDriver();
+		headerOptions = new HeaderOptions(driver);
+		footerOptions = new FooterOptions(driver);
+		affiliateProgramPage = footerOptions.clickOnAffiliateTextOnBottom();
+		Assert.assertTrue(affiliateProgramPage.didWeNavigateToAffiliateProgramPage());
+		driver = navigateBack(driver);
+		
+		loginPage.getDriver();
+		headerOptions = new HeaderOptions(driver);
+		footerOptions = new FooterOptions(driver);
+		specialOffersPage = footerOptions.clickOnSepcialsTextOnBottom();
+		Assert.assertTrue(specialOffersPage.didWeNavigateToSpecialOffersPage());
+		driver = navigateBack(driver);
+		
+		loginPage.getDriver();
+		headerOptions = new HeaderOptions(driver);
+		footerOptions = new FooterOptions(driver);
+		loginPage = footerOptions.clickOnOrderHistoryTextOnBottom();
+		Assert.assertTrue(loginPage.verifyNewCustomerHeadingOnLoginPage());
+		driver = navigateBack(driver);
+		
+		loginPage.getDriver();
+		headerOptions = new HeaderOptions(driver);
+		footerOptions = new FooterOptions(driver);
+		loginPage = footerOptions.clickOnNewsLetterTextOnBottom();
+		Assert.assertTrue(loginPage.verifyNewCustomerHeadingOnLoginPage());
+		driver = navigateBack(driver);
+
 	 }
+	@Test(priority=18)
+	public void verifyDifferentWaysOfNavigatingToLoginPage() {
+		
+		Assert.assertTrue(loginPage.verifyLoginBreadCrumb());
+		registerPage = loginPage.clickOnContinueButtonOnLoginPage();
+		loginPage = registerPage.clickOnLoginPageLinkText();
+		Assert.assertTrue(loginPage.verifyLoginBreadCrumb());
+		driver = loginPage.getDriver();
+		rightColumnOptions = new RightColumnOptions(driver);
+		loginPage = rightColumnOptions.clickLoginTextOnRightPanel();
+		Assert.assertTrue(loginPage.verifyLoginBreadCrumb());
+		driver = loginPage.getDriver();
+		headerOptions = new HeaderOptions(driver);
+		headerOptions.clickOnMyAccountDropMenu();
+		loginPage = headerOptions.clickLoginMenu();
+		Assert.assertTrue(loginPage.verifyLoginBreadCrumb());
+		
+	}
 	
+	@Test(priority=19)
+	public void verifyBreadcrumbPageHeadingTitleOnLoginPage() {
+		
+		Assert.assertTrue(loginPage.verifyLoginBreadCrumb());
+		Assert.assertEquals(getPageTitle(driver), prop.getProperty("loginPageTitle"));
+		Assert.assertEquals(getPageURL(driver), prop.getProperty("loginPageURL"));
+		Assert.assertEquals(loginPage.getTextOfNewCustomerHeadingOnLoginPage(), prop.getProperty("expectedHeadingOne"));
+		Assert.assertEquals(loginPage.getTextReturningCustomerHeadingOnLoginPage(), prop.getProperty("expectedHeadingTwo"));	
+	}
+	
+	@Test(priority = 20)
+	public void verifyUIOfLoginPage() {
+
+		Utilities.takeScreenshot(driver, "//ScreenShots//actualLoginPageUI.png");
+		Assert.assertFalse(Utilities.compareTwoScreenShots(
+				System.getProperty("user.dir") + "//ScreenShots//actualLoginPageUI.png",
+				System.getProperty("user.dir") + "//ScreenShots//expectedLoginPageUI.png"));
+	}
+	
+	@Test(priority = 21)
+	public void verifyLoginInAllEnvironments() {
+		
+		loginPage.enterUsernameEmail(prop.getProperty("existingEmail"));
+		loginPage.enterPassword(prop.getProperty("validPassword"));
+		accountPage = loginPage.clickLoginButton();
+		Assert.assertTrue(accountPage.didWeNavigateToAccountPage());
+		Assert.assertTrue(accountPage.isUserLoggedIn());
+		
+	}
+
 	
 	
 }

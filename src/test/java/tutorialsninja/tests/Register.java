@@ -225,16 +225,17 @@ public class Register extends Base {
 	public void verifyNavigatingToRegisterAccountPageWithMultipleWays() {
 
 		Assert.assertTrue(registerPage.didWeNavigateToRegisterAccountPage());
-
-		registerPage.didWeNavigateToRegisterAccountPage();
-		loginPage = registerPage.selectLoginDopMenu();
-
-		Assert.assertTrue(loginPage.verifyNewCustomerHeadingOnLoginPage());
-		loginPage.clickOnContinueButtonOnLoginPage();
+		driver = registerPage.getDriverFromRegisterPage();
+		headerOptions = new HeaderOptions(driver);
+		headerOptions.clickOnMyAccountDropMenu();
+		loginPage = headerOptions.clickLoginMenu();
+		registerPage = loginPage.clickOnContinueButtonOnLoginPage();
 		Assert.assertTrue(registerPage.didWeNavigateToRegisterAccountPage());
 
-		registerPage.didWeNavigateToRegisterAccountPage();
-		loginPage = registerPage.selectLoginDopMenu();
+		driver = registerPage.getDriverFromRegisterPage();
+		headerOptions = new HeaderOptions(driver);
+		headerOptions.clickOnMyAccountDropMenu();
+		loginPage = headerOptions.clickLoginMenu();
 		loginPage.clickOnRegisterOption();
 		Assert.assertTrue(registerPage.didWeNavigateToRegisterAccountPage());
 	}
@@ -731,7 +732,7 @@ public class Register extends Base {
 		Assert.assertEquals(registerPage.getPasswordConfirmFieldHeight(), expectedHeight);
 		Assert.assertEquals(registerPage.getPasswordConfirmWidth(), expectedWidth);
 
-		driver = navigateToRegisterPage(driver, prop.getProperty("registerPageURL"));
+		driver = navigateToPage_GivenURL(driver, prop.getProperty("registerPageURL"));
 
 		Utilities.takeScreenshot(driver, "\\Screenshots\\registerPageActualAligment.png");
 
@@ -874,7 +875,7 @@ public class Register extends Base {
 		registerPage.clickOnPrivacyPolicy();
 		Assert.assertTrue(registerPage.waitAndDisplayStatusOfClosePrivacyPolicyOption(driver, 10));
 		registerPage.clickOnXButtonOfAlert();
-		driver = navigateToRegisterPage(driver, prop.getProperty("registerPageURL"));
+		driver = navigateToPage_GivenURL(driver, prop.getProperty("registerPageURL"));
 
 		registerPage = new RegisterPage(driver);
 		registerPage.clickOnContinueButton();
@@ -960,17 +961,23 @@ public class Register extends Base {
 		driver = navigateBack(driver);
 
 		registerPage = new RegisterPage(driver);
-		aboutUsPage = registerPage.clickOnAboutUsOnBottom();
+		driver = registerPage.getDriverFromRegisterPage();
+		footerOptions = new FooterOptions(driver);
+		aboutUsPage = footerOptions.clickOnAboutUsOnBottom();
 		Assert.assertTrue(aboutUsPage.verifyAboutUsBreadCrumb());
 		driver = navigateBack(driver);
 
 		registerPage = new RegisterPage(driver);
-		contactUsPage = registerPage.clickOnContactUsOnBottom();
+		driver = registerPage.getDriverFromRegisterPage();
+		footerOptions = new FooterOptions(driver);
+		contactUsPage = footerOptions.clickOnContactUsOnBottom();
 		Assert.assertTrue(contactUsPage.didWeNavigateToContactUsPage());
 		driver = navigateBack(driver);
 
 		registerPage = new RegisterPage(driver);
-		brandsPage = registerPage.clickOnBrandsTextOnBottom();
+		driver = registerPage.getDriverFromRegisterPage();
+		footerOptions = new FooterOptions(driver);
+		brandsPage = footerOptions.clickOnBrandsTextOnBottom();
 		Assert.assertTrue(brandsPage.didWeNavigateToBrandsPage());
 		driver = navigateBack(driver);
 
@@ -1076,17 +1083,15 @@ public class Register extends Base {
 		driver = registerPage.getDriverFromRegisterPage();
 		headerOptions = new HeaderOptions(driver);
 		Assert.assertTrue(headerOptions.getAccountBreadcrumb());
-		Assert.assertEquals(registerPage.getRegisterAccountText(), "Register Account");
+		Assert.assertEquals(registerPage.getRegisterAccountText(), prop.getProperty("registerPageTitle"));
 		Assert.assertEquals(driver.getCurrentUrl(), prop.getProperty("registerPageURL"));
-
-		String expectedTitle = prop.getProperty("registerPageTitle");
-		Assert.assertEquals(driver.getTitle(), expectedTitle);
+		Assert.assertEquals(driver.getTitle(), prop.getProperty("registerPageTitle"));
 	}
 
 	@Test(priority = 26)
-	public void verifyUIOfRegisterAccountPage() throws IOException {
+	public void verifyUIOfRegisterAccountPage() {
 
-		Utilities.takeScreenshot(driver, System.getProperty("user.dir") + "//ScreenShots//actualRegisterPageUI.png");
+		Utilities.takeScreenshot(driver, "//ScreenShots//actualRegisterPageUI.png");
 		Assert.assertTrue(Utilities.compareTwoScreenShots(
 				System.getProperty("user.dir") + "//ScreenShots//actualRegisterPageUI.png",
 				System.getProperty("user.dir") + "//ScreenShots//expectedRegisterPageUI.png"));

@@ -24,6 +24,9 @@ public class LoginPage {
 	@FindBy(xpath="//h2[normalize-space()='New Customer']")
 	private WebElement newCustomerHeading;
 	
+	@FindBy(xpath="//h2[normalize-space()='Returning Customer']")
+	private WebElement returningCustomerHeading;
+	
 	@FindBy(linkText="Register")
 	private WebElement registerOption;
 	
@@ -97,6 +100,14 @@ public class LoginPage {
 	
 	public boolean verifyNewCustomerHeadingOnLoginPage() {
 		return newCustomerHeading.isDisplayed();
+	}
+	
+	public String getTextOfNewCustomerHeadingOnLoginPage() {
+		return newCustomerHeading.getText();
+	}
+	
+	public String getTextReturningCustomerHeadingOnLoginPage() {
+		return returningCustomerHeading.getText();
 	}
 	
 	public RegisterPage clickOnContinueButtonOnLoginPage(){

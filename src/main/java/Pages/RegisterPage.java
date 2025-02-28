@@ -126,14 +126,7 @@ public class RegisterPage {
 	
 	private By xOptionPrivacyPolicy = By.xpath("//button[normalize-space()='×']");
 
-	@FindBy(linkText = "About Us")
-	private WebElement aboutUsTextOnBottom;
 	
-	@FindBy(linkText = "Contact Us")
-	private WebElement contactUsTextOnBottom;
-	
-	@FindBy(linkText = "Brands")
-	private WebElement brandsTextOnBottom;
  
 	@FindBy(xpath = "//ul[@class='breadcrumb']//a[normalize-space()='Register']")
 	private WebElement registerBreadcrumb;
@@ -449,20 +442,7 @@ public class RegisterPage {
 		xButtonAlert.click();	
 	}
 	
-	public AboutUsPage clickOnAboutUsOnBottom() {
-		aboutUsTextOnBottom.click();	
-		return new AboutUsPage(driver);
-	}
 	
-	public ContactUsPage clickOnContactUsOnBottom() {
-		contactUsTextOnBottom.click();	
-		return new ContactUsPage(driver);
-	}
-	
-	public BrandsPage clickOnBrandsTextOnBottom() {
-		brandsTextOnBottom.click();	
-		return new BrandsPage(driver);
-	}
 
 	public boolean getRegisterBreadcrumb() {
 		return registerBreadcrumb.isDisplayed();	

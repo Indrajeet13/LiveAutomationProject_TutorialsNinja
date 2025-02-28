@@ -28,11 +28,16 @@ public class Utilities {
 		
 	}
 	
-	public static boolean compareTwoScreenShots(String actualImagePath, String expectedImagePath) throws IOException
+	public static boolean compareTwoScreenShots(String actualImagePath, String expectedImagePath)
 	{
-		BufferedImage actualBImg = ImageIO.read(new File(actualImagePath));
-		BufferedImage expectedBImg = ImageIO.read(new File(expectedImagePath));
-		
+		BufferedImage actualBImg = null ;
+		BufferedImage expectedBImg = null;
+		try {
+			actualBImg = ImageIO.read(new File(actualImagePath));
+			expectedBImg = ImageIO.read(new File(expectedImagePath));
+		}catch(IOException e) {
+			e.printStackTrace();
+		}
 		ImageDiffer imgDiffer = new ImageDiffer();
 		ImageDiff imgDifference = imgDiffer.makeDiff(actualBImg, expectedBImg);
 		

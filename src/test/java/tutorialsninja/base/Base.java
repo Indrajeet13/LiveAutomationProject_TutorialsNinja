@@ -44,7 +44,7 @@ public class Base {
 		return driver;
 	}
 	
-	public WebDriver navigateToRegisterPage(WebDriver driver, String URL) {
+	public WebDriver navigateToPage_GivenURL(WebDriver driver, String URL) {
 		driver.navigate().to(URL);
 		return driver;
 	}
@@ -80,8 +80,10 @@ public class Base {
 	
 	public String getPageURL(WebDriver driver) {
 		return driver.getCurrentUrl();
-		
 	}
 	
+	public String getPageTitle(WebDriver driver) {
+		return driver.getTitle();
+	}
 	
 }

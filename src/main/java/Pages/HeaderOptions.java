@@ -42,10 +42,22 @@ public class HeaderOptions {
 	@FindBy(xpath = "//ul[@class='breadcrumb']//i[@class='fa fa-home']")
 	private WebElement homeBreadcrumb;
 	
+	@FindBy(xpath = "//span[normalize-space()='My Account']")
+	private WebElement myAccountDropMenu;
+	
+	@FindBy(xpath = "//ul[@class='dropdown-menu dropdown-menu-right']//a[normalize-space()='Login']")
+	private WebElement loginOption;
 	
 	
 	
+	public LoginPage clickLoginMenu() {
+		loginOption.click();
+		return new LoginPage(driver);
+	}
 	
+	public void clickOnMyAccountDropMenu() {
+		myAccountDropMenu.click();
+	}
 	
 	public ContactUsPage selectPhoneIcon() {
 		phoneIcon.click();

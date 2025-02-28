@@ -5,7 +5,7 @@
     <classes>
       <class name="tutorialsninja.tests.Login">
         <methods>
-          <include name="verifyNavigateToDifferentPagesFromLoginPage"/>
+          <include name="verifyUIOfLoginPage"/>
           <include name="tearDown"/>
           <include name="setup"/>
         </methods>

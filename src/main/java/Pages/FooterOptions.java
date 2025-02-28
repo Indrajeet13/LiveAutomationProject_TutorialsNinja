@@ -47,6 +47,16 @@ public class FooterOptions {
 	@FindBy(xpath = "//ul[@class='list-unstyled']//a[normalize-space()='Newsletter']")
 	private WebElement newsletterTextOnBottom;
 	
+	@FindBy(linkText = "About Us")
+	private WebElement aboutUsTextOnBottom;
+	
+	@FindBy(linkText = "Contact Us")
+	private WebElement contactUsTextOnBottom;
+	
+	@FindBy(linkText = "Brands")
+	private WebElement brandsTextOnBottom;
+	
+	
 	public LoginPage clickOnMyAccountTextOnBottom() {
 		myAccountTextOnBottom.click();	
 		return new LoginPage(driver);
@@ -102,7 +112,20 @@ public class FooterOptions {
 		return new LoginPage(driver);
 	}
 	
+	public AboutUsPage clickOnAboutUsOnBottom() {
+		aboutUsTextOnBottom.click();	
+		return new AboutUsPage(driver);
+	}
 	
+	public ContactUsPage clickOnContactUsOnBottom() {
+		contactUsTextOnBottom.click();	
+		return new ContactUsPage(driver);
+	}
+	
+	public BrandsPage clickOnBrandsTextOnBottom() {
+		brandsTextOnBottom.click();	
+		return new BrandsPage(driver);
+	}
 	
 	
 	
