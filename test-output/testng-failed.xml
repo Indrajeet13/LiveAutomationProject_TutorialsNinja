@@ -6,18 +6,24 @@
       <class name="tutorialsninja.tests.Register">
         <methods>
           <include name="setup"/>
+          <include name="verifyHeadingAndTrailingSpacesWhileRegisteringPage"/>
           <include name="verifyRegisteringAccountByProvidingInvalidTelephone"/>
           <include name="teardown"/>
           <include name="verifyRegisteringAccountByCheckingThePasswordStandards" invocation-numbers="0 1 2 3 4"/>
           <include name="verifyDatabaseTestingOfRegisteringAccount"/>
+          <include name="verifyRegisteringAccountByProvidingEntriesUsingKeyboardActions"/>
           <include name="verifyRegisteringAccountFielsHeightWidthAlignment"/>
-          <include name="verifyRegisteringAccountUsingInvalidEmails"/>
+          <include name="verifyRegisteringAccountByProvidingOnlySpace"/>
         </methods>
       </class> <!-- tutorialsninja.tests.Register -->
       <class name="tutorialsninja.tests.Login">
         <methods>
+          <include name="verifyLoginUsingKeyboardTabs"/>
+          <include name="verifyNavigateToDifferentPagesFromLoginPage"/>
+          <include name="verifyBrowserBackAfterLogin"/>
           <include name="verifyPasswordIsVisibleInPageSource"/>
           <include name="verifyLoginIntoApplicationAfterChangingPassword"/>
+          <include name="verifyUIOfLoginPage"/>
           <include name="tearDown"/>
           <include name="setup"/>
         </methods>
