@@ -11,13 +11,71 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import Pages.AboutUsPage;
+import Pages.AccountLogoutPage;
+import Pages.AccountPage;
+import Pages.AccountSuccessPage;
+import Pages.AffiliateProgramPage;
+import Pages.BrandsPage;
+import Pages.ChangePasswordPage;
+import Pages.ContactUsPage;
+import Pages.DeliveryInformationPage;
+import Pages.EditAccountInformationPage;
+import Pages.FooterOptions;
+import Pages.ForgotPasswordPage;
+import Pages.GiftCertificatesPage;
+import Pages.HeaderOptions;
+import Pages.LandingPage;
+import Pages.LoginPage;
+import Pages.NewsletterPage;
+import Pages.PrivacyPolicyPage;
+import Pages.ProductReturnsPage;
+import Pages.RegisterPage;
+import Pages.RightColumnOptions;
+import Pages.SearchPage;
+import Pages.ShoppingCartPage;
+import Pages.SiteMapPage;
+import Pages.SpecialOffersPage;
+import Pages.TermsAndConditionPage;
+import utils.MyXLSReader;
 import utils.Utilities;
 
 public class Base {
 
-	WebDriver driver;
-	Properties prop;
+	public WebDriver driver;
+	public Properties prop;
+	public MyXLSReader myXLSReader;
+	public RegisterPage registerPage;
+	public AccountSuccessPage accountSuccessPage;
+	public AccountPage accountPage;
+	public NewsletterPage newsletterPage;
+	public LoginPage loginPage;
+	public EditAccountInformationPage editAccountInformationPage;
+	public ContactUsPage contactUsPage;
+	public ShoppingCartPage shoppingCart;
+	public SearchPage searchPage;
+	public WebDriverWait wait;
+	public ForgotPasswordPage forgotPassword;
+	public AboutUsPage aboutUsPage;
+	public BrandsPage brandsPage;
+	public DeliveryInformationPage deliveryInformationPage;
+	public PrivacyPolicyPage privacyPolicyPage;
+	public TermsAndConditionPage termsAndConditionPage;
+	public ProductReturnsPage productReturnsPage;
+	public SiteMapPage siteMapPage;
+	public GiftCertificatesPage giftCertificatesPage;
+	public AffiliateProgramPage affiliateProgramPage;
+	public SpecialOffersPage specialOffersPage;
+	public HeaderOptions headerOptions;
+	public RightColumnOptions rightColumnOptions;
+	public FooterOptions footerOptions;
+	public LandingPage landingPage;
+	public AccountLogoutPage logoutAccountPage;
+	public ChangePasswordPage changePasswordPage ;
+
+	
 	
 	public WebDriver openBrowserAndApplication() 
 	{

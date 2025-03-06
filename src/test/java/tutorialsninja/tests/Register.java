@@ -8,6 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.Duration;
+import java.util.HashMap;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Properties;
@@ -19,7 +20,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.io.FileHandler;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -27,62 +27,21 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import Pages.AboutUsPage;
-import Pages.AccountPage;
 import Pages.AccountSuccessPage;
-import Pages.AffiliateProgramPage;
-import Pages.BrandsPage;
-import Pages.ContactUsPage;
-import Pages.DeliveryInformationPage;
-import Pages.EditAccountInformationPage;
 import Pages.FooterOptions;
-import Pages.ForgotPasswordPage;
-import Pages.GiftCertificatesPage;
 import Pages.HeaderOptions;
 import Pages.LandingPage;
-import Pages.LoginPage;
-import Pages.NewsletterPage;
-import Pages.PrivacyPolicyPage;
-import Pages.ProductReturnsPage;
 import Pages.RegisterPage;
 import Pages.RightColumnOptions;
-import Pages.SearchPage;
-import Pages.ShoppingCartPage;
-import Pages.SiteMapPage;
-import Pages.SpecialOffersPage;
-import Pages.TermsAndConditionPage;
 import tutorialsninja.base.Base;
+import utils.MyXLSReader;
 import utils.Utilities;
 
 public class Register extends Base {
 
-	WebDriver driver;
+	public WebDriver driver;
 	Properties prop;
-	LandingPage landingPage;
-	RegisterPage registerPage;
-	AccountSuccessPage accountSuccessPage;
-	AccountPage accountPage;
-	NewsletterPage newsletterPage;
-	LoginPage loginPage;
-	EditAccountInformationPage editAccountInformationPage;
-	ContactUsPage contactUsPage;
-	ShoppingCartPage shoppingCart;
-	SearchPage searchPage;
-	WebDriverWait wait;
-	ForgotPasswordPage forgotPassword;
-	AboutUsPage aboutUsPage;
-	BrandsPage brandsPage;
-	DeliveryInformationPage deliveryInformationPage;
-	PrivacyPolicyPage privacyPolicyPage;
-	TermsAndConditionPage termsAndConditionPage;
-	ProductReturnsPage productReturnsPage;
-	SiteMapPage siteMapPage;
-	GiftCertificatesPage giftCertificatesPage;
-	AffiliateProgramPage affiliateProgramPage;
-	SpecialOffersPage specialOffersPage;
-	HeaderOptions headerOptions;
-	RightColumnOptions rightColumnOptions;
-	FooterOptions footerOptions;
+	
 	
 	@BeforeMethod
 	public void setup() {
@@ -573,14 +532,14 @@ public class Register extends Base {
 	}
 
 	@Test(dataProvider = "PasswordSupplier", priority = 17)
-	public void verifyRegisteringAccountByCheckingThePasswordStandards(String passwordText) {
+	public void verifyRegisteringAccountByCheckingThePasswordStandards(HashMap<String,String> hMap) {
 
 		registerPage.enterFirstName(prop.getProperty("firstName"));
 		registerPage.enterLastName(prop.getProperty("lastName"));
 		registerPage.enterEmail(Utilities.generateBrandNewEmail());
 		registerPage.enterTelephone(prop.getProperty("telephoneNum"));
-		registerPage.enterPassword(passwordText);
-		registerPage.enterPasswordConfirm(passwordText);
+		registerPage.enterPassword(hMap.get("Passwords"));
+		registerPage.enterPasswordConfirm(hMap.get("Passwords"));
 		registerPage.checkPrivacyPolicy();
 		registerPage.clickOnYesNewsLetter();
 		registerPage.clickOnContinueButton();
@@ -600,7 +559,8 @@ public class Register extends Base {
 	@DataProvider(name = "PasswordSupplier")
 	public Object[][] supplyPasswordsDataCombinations() {
 
-		Object[][] data = { { "12345" }, { "abcdefg" }, { "1245asas" }, { "abs1212$" }, { "ABCD123#" } };
+		myXLSReader = new MyXLSReader(System.getProperty("user.dir")+"\\src\\test\\resources\\TutorialsNinjaData.xlsx");
+		Object[][] data = Utilities.getTestData(myXLSReader, "RegisterTestsSupplyPasswords", "data");
 		return data;
 
 	}
@@ -762,10 +722,10 @@ public class Register extends Base {
 		registerPage.enterPassword(prop.getProperty("validPassword"));
 		registerPage.enterPasswordConfirm(prop.getProperty("validPassword"));
 		registerPage.checkPrivacyPolicy();
-
 		accountSuccessPage = registerPage.clickOnContinueButton();
-
 		Assert.assertTrue(accountSuccessPage.isUserLoggedIn());
+		
+		
 		accountPage = accountSuccessPage.clickOnContinueButton();
 		editAccountInformationPage = accountPage.clickEditYourAccountInformationOption();
 

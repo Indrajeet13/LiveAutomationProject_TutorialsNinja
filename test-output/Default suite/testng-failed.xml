@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tutorialsninja.tests.Login">
+      <class name="tutorialsninja.tests.Register">
         <methods>
-          <include name="verifyUIOfLoginPage"/>
-          <include name="tearDown"/>
           <include name="setup"/>
+          <include name="teardown"/>
+          <include name="verifyRegisteringAccountByCheckingThePasswordStandards" invocation-numbers="0 1 2 3 4"/>
         </methods>
-      </class> <!-- tutorialsninja.tests.Login -->
+      </class> <!-- tutorialsninja.tests.Register -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

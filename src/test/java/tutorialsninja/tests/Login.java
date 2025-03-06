@@ -1,7 +1,5 @@
 package tutorialsninja.tests;
 
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.util.Properties;
 
 import org.openqa.selenium.Keys;
@@ -11,59 +9,19 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import Pages.AboutUsPage;
-import Pages.AccountLogoutPage;
 import Pages.AccountPage;
-import Pages.AffiliateProgramPage;
-import Pages.BrandsPage;
-import Pages.ChangePasswordPage;
-import Pages.ContactUsPage;
-import Pages.DeliveryInformationPage;
 import Pages.FooterOptions;
-import Pages.ForgotPasswordPage;
-import Pages.GiftCertificatesPage;
 import Pages.HeaderOptions;
 import Pages.LandingPage;
 import Pages.LoginPage;
-import Pages.PrivacyPolicyPage;
-import Pages.ProductReturnsPage;
-import Pages.RegisterPage;
 import Pages.RightColumnOptions;
-import Pages.SearchPage;
-import Pages.ShoppingCartPage;
-import Pages.SiteMapPage;
-import Pages.SpecialOffersPage;
-import Pages.TermsAndConditionPage;
 import tutorialsninja.base.Base;
 import utils.Utilities;
 
 public class Login extends Base{
 	
-	WebDriver driver;
+	public WebDriver driver;
 	Properties prop;
-	LandingPage landingPage;
-	LoginPage loginPage;
-	AccountPage accountPage;
-	AccountLogoutPage logoutAccountPage;
-	ChangePasswordPage changePasswordPage ;
-	ContactUsPage contactUsPage;
-	ShoppingCartPage shoppingCart;
-	SearchPage searchPage;
-	RegisterPage registerPage;
-	ForgotPasswordPage forgotPassword;
-	AboutUsPage aboutUsPage;
-	BrandsPage brandsPage;
-	DeliveryInformationPage deliveryInformationPage;
-	PrivacyPolicyPage privacyPolicyPage;
-	TermsAndConditionPage termsAndConditionPage;
-	ProductReturnsPage productReturnsPage;
-	SiteMapPage siteMapPage;
-	GiftCertificatesPage giftCertificatesPage;
-	AffiliateProgramPage affiliateProgramPage;
-	SpecialOffersPage specialOffersPage;
-	HeaderOptions headerOptions;
-	RightColumnOptions rightColumnOptions;
-	FooterOptions footerOptions;
 	
 	@BeforeMethod
 	public void setup() {
