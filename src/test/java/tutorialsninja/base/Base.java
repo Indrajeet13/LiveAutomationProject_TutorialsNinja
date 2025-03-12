@@ -13,34 +13,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import Pages.AboutUsPage;
-import Pages.AccountLogoutPage;
-import Pages.AccountPage;
-import Pages.AccountSuccessPage;
-import Pages.AffiliateProgramPage;
-import Pages.BrandsPage;
-import Pages.ChangePasswordPage;
-import Pages.ContactUsPage;
-import Pages.DeliveryInformationPage;
-import Pages.EditAccountInformationPage;
-import Pages.FooterOptions;
-import Pages.ForgotPasswordPage;
-import Pages.GiftCertificatesPage;
-import Pages.HeaderOptions;
-import Pages.LandingPage;
-import Pages.LoginPage;
-import Pages.NewsletterPage;
-import Pages.PrivacyPolicyPage;
-import Pages.ProductReturnsPage;
-import Pages.RegisterPage;
-import Pages.RightColumnOptions;
-import Pages.SearchPage;
-import Pages.ShoppingCartPage;
-import Pages.SiteMapPage;
-import Pages.SpecialOffersPage;
-import Pages.TermsAndConditionPage;
-import utils.MyXLSReader;
-import utils.Utilities;
+import Pages.*;
+import utils.*;
 
 public class Base {
 
@@ -142,6 +116,19 @@ public class Base {
 	
 	public String getPageTitle(WebDriver driver) {
 		return driver.getTitle();
+	}
+	
+	public void closeBrowser(WebDriver driver) {
+		if(driver!=null) {
+			driver.quit();
+		}
+		
+		
+	}
+
+	public WebDriver refreshPage(WebDriver driver) {
+		driver.navigate().refresh();
+		return driver;
 	}
 	
 }

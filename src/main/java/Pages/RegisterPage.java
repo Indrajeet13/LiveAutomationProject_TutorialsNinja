@@ -4,23 +4,19 @@ import java.io.File;
 import java.time.Duration;
 import java.util.List;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.*;
+import org.openqa.selenium.support.ui.*;
+import Pages.root.RootPage;
 
-public class RegisterPage {
+public class RegisterPage extends RootPage{
 
-	WebDriver driver;
 	File srcScreenshot;
 	WebDriverWait wait;
 	JavascriptExecutor jse;
 
 	public RegisterPage(WebDriver driver) {
+		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -174,27 +170,63 @@ public class RegisterPage {
 	}
 
 	public String getFirstNameWarningMessage() {
-		return firstNameWarningMessage.getText();
+		String firstNameWarningMessageText = null;
+		try {
+			firstNameWarningMessageText = firstNameWarningMessage.getText();
+		} catch (NoSuchElementException e) {
+			firstNameWarningMessageText = null;
+		}
+		return firstNameWarningMessageText;
 	}
 
 	public String getLastNameWarningMessage() {
-		return lastNameWarningMessage.getText();
+		String lastNameWarningMessageText = null;
+		try {
+			lastNameWarningMessageText = lastNameWarningMessage.getText();
+		} catch (NoSuchElementException e) {
+			lastNameWarningMessageText = null;
+		}
+		return lastNameWarningMessageText;
 	}
 
 	public String getEmailWarningMessage() {
-		return emailWarningMessage.getText();
+		String emailWarningMessageText = null;
+		try {
+			emailWarningMessageText = emailWarningMessage.getText();
+		} catch (NoSuchElementException e) {
+			emailWarningMessageText = null;
+		}
+		return emailWarningMessageText;
 	}
 
 	public String getTelephoneWarningMessage() {
-		return telephoneWarningMessage.getText();
+		String telephoneWarningMessageText = null;
+		try {
+			telephoneWarningMessageText = telephoneWarningMessage.getText();
+		} catch (NoSuchElementException e) {
+			telephoneWarningMessageText = null;
+		}
+		return telephoneWarningMessageText;
 	}
 
 	public String getPasswordWarningMessage() {
-		return passwordWarningMessage.getText();
+		String passwordWarningMessageText = null;
+		try {
+			passwordWarningMessageText = passwordWarningMessage.getText();
+		} catch (NoSuchElementException e) {
+			passwordWarningMessageText = null;
+		}
+		return passwordWarningMessageText;
 	}
 
 	public String getPrivacyPolicyWarningMessage() {
-		return privacyPolicyWarningMessage.getText();
+		String privacyPolicyWarningMessageText = null;
+		try {
+			privacyPolicyWarningMessageText = privacyPolicyWarningMessage.getText();
+		} catch (NoSuchElementException e) {
+			privacyPolicyWarningMessageText = null;
+		}
+		return privacyPolicyWarningMessageText;
 	}
 
 	public void clickOnYesNewsLetter() {
@@ -202,7 +234,14 @@ public class RegisterPage {
 	}
 
 	public boolean didWeNavigateToRegisterAccountPage() {
-		return registerAccountHeading.isDisplayed();
+		boolean b = false;
+		try {
+			b =  registerAccountHeading.isDisplayed();
+		}catch(NoSuchElementException e)
+		{
+			b = false;
+		}
+		return b;
 	}
 
 	public void clickOnMyAccountDopMenu() {
@@ -215,11 +254,23 @@ public class RegisterPage {
 	}
 
 	public String getWarningMessage() {
-		return warningMessage.getText();
+		String warningMessageText = null;
+		try {
+			warningMessageText = warningMessage.getText();
+		} catch (NoSuchElementException e) {
+			warningMessageText = null;
+		}
+		return warningMessageText;
 	}
 
 	public String getEmailAddressAlreadyExistWarningMessage() {
-		return emailAddessAlreadyExistWarning.getText();
+		String emailAddessAlreadyExistWarningText = null;
+		try {
+			emailAddessAlreadyExistWarningText = emailAddessAlreadyExistWarning.getText();
+		} catch (NoSuchElementException e) {
+			emailAddessAlreadyExistWarningText = null;
+		}
+		return emailAddessAlreadyExistWarningText;
 	}
 
 	public String getEmailValidationMessage() {
@@ -395,7 +446,14 @@ public class RegisterPage {
 	}
 	
 	public boolean passworWarningIsDisplayed(){
-		return passwordWarningMessage.isDisplayed();
+		boolean b = false;
+		try {
+			b =  passwordWarningMessage.isDisplayed();
+		}catch(NoSuchElementException e)
+		{
+			b = false;
+		}
+		return b;
 	}
 	
 	public String getPasswordConfirmFieldHeight() {
@@ -445,16 +503,26 @@ public class RegisterPage {
 	
 
 	public boolean getRegisterBreadcrumb() {
-		return registerBreadcrumb.isDisplayed();	
+		boolean b = false;
+		try {
+			b =  registerBreadcrumb.isDisplayed();
+		}catch(NoSuchElementException e)
+		{
+			b = false;
+		}
+		return b;	
 	}
 	
 	public String getRegisterAccountText() {
-		return registerAccountText.getText();	
+		String registerAccountText1 = null;
+		try {
+			registerAccountText1 = registerAccountText.getText();
+		} catch (NoSuchElementException e) {
+			registerAccountText1 = null;
+		}
+		return registerAccountText1;
 	}
 	
-	public WebDriver getDriverFromRegisterPage(){
-		return driver;
-		
-	}
+
 	
 }

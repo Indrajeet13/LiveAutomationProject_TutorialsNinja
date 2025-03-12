@@ -2,18 +2,15 @@ package Pages;
 
 import java.time.Duration;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.*;
+import org.openqa.selenium.support.ui.*;
+import Pages.root.RootPage;
 
-public class AccountSuccessPage {
-	
-	WebDriver driver;
-	
+public class AccountSuccessPage extends RootPage{
+
 	public AccountSuccessPage(WebDriver driver){
+		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -37,11 +34,24 @@ public class AccountSuccessPage {
 	public boolean isUserLoggedIn() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	    wait.until(ExpectedConditions.visibilityOf(logoutOption));
-	    return logoutOption.isDisplayed();
+	    boolean b = false;
+		try {
+			b =  logoutOption.isDisplayed();
+		}catch(NoSuchElementException e)
+		{
+			b = false;
+		}
+		return b;
 	}
 	
 	public String getPageHeading() {
-		return pageHeading.getText();
+		String pageHeadingText = null;
+		try {
+			pageHeadingText = pageHeading.getText();
+		} catch (NoSuchElementException e) {
+			pageHeadingText = null;
+		}
+		return pageHeadingText;
 	}
 	
 	public AccountPage clickOnContinueButton() {
@@ -50,7 +60,14 @@ public class AccountSuccessPage {
 	}
 	
 	public boolean didWeNavigateToAccountSucessPage() {
-		return myAccountHeading.isDisplayed();
+		 boolean b = false;
+			try {
+				b =  myAccountHeading.isDisplayed();
+			}catch(NoSuchElementException e)
+			{
+				b = false;
+			}
+			return b;
 	}
 	
 }

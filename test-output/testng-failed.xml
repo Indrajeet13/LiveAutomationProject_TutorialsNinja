@@ -1,43 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="Listeners.MyListeners"/>
-  </listeners>
-  <test thread-count="5" name="Test(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tutorialsninja.tests.Register">
+      <class name="tutorialsninja.tests.Search">
         <methods>
-          <include name="verifyRegisteringAccountByProvidingInvalidTelephone"/>
-          <include name="verifyRegisteringAccountByCheckingThePasswordStandards"/>
-          <include name="verifyBreadcrumbTitleHeadingRegisterAccount"/>
-          <include name="verifyUIOfRegisterAccountPage"/>
-          <include name="verifyMandatoryFieldsInRegisterAccountPage"/>
-          <include name="verifyRegisteringAccountWithoutEnteringPasswordIntoPasswordConfirmField"/>
-          <include name="verifyRegisteringAccountFielsHeightWidthAlignment"/>
-          <include name="verifyRegisteringAccountInDifferentEnvironments"/>
-          <include name="verifyPlaceholdersOfTextFieldsInRegisterAccountPage"/>
-          <include name="verifyRegisteringAccountUsingInvalidEmails"/>
-          <include name="verifyWorkingOfEveryLinkOnRegisterAccount"/>
-          <include name="setup"/>
-          <include name="verifyHeadingAndTrailingSpacesWhileRegisteringPage"/>
-          <include name="teardown"/>
-          <include name="verifyDatabaseTestingOfRegisteringAccount"/>
-          <include name="verifyPrivacyPolicyFieldsOnRegisteringAccountPage"/>
-          <include name="verifyRegisteringAccountVisibilityTogglingOfPasswordFields"/>
-          <include name="verifyRegisteringAccountByProvidingEntriesUsingKeyboardActions"/>
-          <include name="verifyRegisteringAccountByProvidingOnlySpace"/>
-          <include name="verifyRegisteringAccountWithoutPrivacyPolicySelection"/>
-        </methods>
-      </class> <!-- tutorialsninja.tests.Register -->
-      <class name="tutorialsninja.tests.Login">
-        <methods>
-          <include name="verifyPasswordIsVisibleInPageSource"/>
-          <include name="verifyLoginIntoApplicationAfterChangingPassword"/>
+          <include name="verifySearchResultingMultipleProducts"/>
           <include name="tearDown"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- tutorialsninja.tests.Login -->
+      </class> <!-- tutorialsninja.tests.Search -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

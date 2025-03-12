@@ -1,15 +1,13 @@
 package Pages;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.*;
+import Pages.root.RootPage;
 
-public class FooterOptions {
+public class FooterOptions extends RootPage{
 
-	WebDriver driver;
-	
 	public FooterOptions(WebDriver driver){
+		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}

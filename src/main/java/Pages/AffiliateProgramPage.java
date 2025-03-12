@@ -1,15 +1,13 @@
 package Pages;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.*;
+import Pages.root.RootPage;
 
-public class AffiliateProgramPage {
-	
-	WebDriver driver;
+public class AffiliateProgramPage extends RootPage{
 	
 	public AffiliateProgramPage(WebDriver driver){
+		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -23,7 +21,14 @@ public class AffiliateProgramPage {
 	
 	
 	public boolean didWeNavigateToAffiliateProgramPage() {
-		return affiliateProgramText.isDisplayed();
+		boolean b = false;
+		try {
+			b =  affiliateProgramText.isDisplayed();
+		}catch(NoSuchElementException e)
+		{
+			b = false;
+		}
+		return b;
 	}
 	
 }

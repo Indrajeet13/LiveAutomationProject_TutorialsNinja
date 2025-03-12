@@ -1,15 +1,13 @@
 package Pages;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.*;
+import Pages.root.RootPage;
 
-public class ForgotPasswordPage {
-	
-	WebDriver driver;
+public class ForgotPasswordPage extends RootPage{
 	
 	public ForgotPasswordPage(WebDriver driver){
+		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -23,7 +21,14 @@ public class ForgotPasswordPage {
 	
 	
 	public boolean verifyForgotPasswordBreadCrumb(){
-		return forgotPasswordBreadcrumb.isDisplayed();
+		boolean b = false;
+		try {
+			b =  forgotPasswordBreadcrumb.isDisplayed();
+		}catch(NoSuchElementException e)
+		{
+			b = false;
+		}
+		return b;
 	}
 	
 	

@@ -1,15 +1,13 @@
 package Pages;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.*;
+import Pages.root.RootPage;
 
-public class ChangePasswordPage {
-	
-	WebDriver driver;
+public class ChangePasswordPage extends RootPage{
 	
 	public ChangePasswordPage(WebDriver driver){
+		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -44,7 +42,14 @@ public class ChangePasswordPage {
 	}
 	
 	public boolean didWeNavigateToPasswordConfirmPage() {
-		return changePasswordBreadcrumb.isDisplayed();
+		boolean b = false;
+		try {
+			b =  changePasswordBreadcrumb.isDisplayed();
+		}catch(NoSuchElementException e)
+		{
+			b = false;
+		}
+		return b;
 	}
 	
 	

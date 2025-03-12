@@ -1,15 +1,13 @@
 package Pages;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.*;
+import Pages.root.RootPage;
 
-public class ShoppingCartPage {
-	
-	WebDriver driver;
+public class ShoppingCartPage extends RootPage{
 	
 	public ShoppingCartPage(WebDriver driver){
+		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -23,7 +21,14 @@ public class ShoppingCartPage {
 	
 	
 	public boolean didWeNavigateToShoppingCartPage(){
-		return shoppingCartBreadCrumb.isDisplayed();
+		boolean b = false;
+		try {
+			b =  shoppingCartBreadCrumb.isDisplayed();
+		}catch(NoSuchElementException e)
+		{
+			b = false;
+		}
+		return b;
 	}
 	
 	

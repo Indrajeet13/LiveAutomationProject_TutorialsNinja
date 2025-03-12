@@ -1,15 +1,13 @@
 package Pages;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.*;
+import Pages.root.RootPage;
 
-public class SiteMapPage {
-	
-	WebDriver driver;
+public class SiteMapPage extends RootPage{
 	
 	public SiteMapPage(WebDriver driver){
+		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -23,6 +21,13 @@ public class SiteMapPage {
 	
 	
 	public boolean didWeNavigateToSiteMapPage() {
-		return siteMapBreadcrumb.isDisplayed();
+		boolean b = false;
+		try {
+			b =  siteMapBreadcrumb.isDisplayed();
+		}catch(NoSuchElementException e)
+		{
+			b = false;
+		}
+		return b;
 	}
 }

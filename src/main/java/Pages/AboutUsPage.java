@@ -1,15 +1,14 @@
 package Pages;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.*;
 
-public class AboutUsPage {
-	
-	WebDriver driver;
+import Pages.root.RootPage;
+
+public class AboutUsPage extends RootPage {
 	
 	public AboutUsPage(WebDriver driver){
+		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -23,7 +22,14 @@ public class AboutUsPage {
 	
 	
 	public boolean verifyAboutUsBreadCrumb(){
-		return aboutUsBreadcrumb.isDisplayed();
+		boolean b = false;
+		try {
+			b =  aboutUsBreadcrumb.isDisplayed();
+		}catch(NoSuchElementException e)
+		{
+			b = false;
+		}
+		return b;
 	}
 	
 	

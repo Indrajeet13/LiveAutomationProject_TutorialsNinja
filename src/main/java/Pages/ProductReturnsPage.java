@@ -1,15 +1,13 @@
 package Pages;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.*;
+import Pages.root.RootPage;
 
-public class ProductReturnsPage {
-	
-	WebDriver driver;
-	
+public class ProductReturnsPage extends RootPage{
+
 	public ProductReturnsPage(WebDriver driver){
+		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -23,7 +21,14 @@ public class ProductReturnsPage {
 	
 	
 	public boolean didWeNavigateToProductReturnsPage() {
-		return productReturnsText.isDisplayed();
+		boolean b = false;
+		try {
+			b =  productReturnsText.isDisplayed();
+		}catch(NoSuchElementException e)
+		{
+			b = false;
+		}
+		return b;
 	}
 	
 	

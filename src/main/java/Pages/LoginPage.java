@@ -1,17 +1,15 @@
 package Pages;
 
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.*;
+import Pages.root.RootPage;
 
-public class LoginPage {
+public class LoginPage extends RootPage{
 	
-	WebDriver driver;
-	
+
 	public LoginPage(WebDriver driver){
+		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -50,11 +48,12 @@ public class LoginPage {
 	
 	
 	
-	
-	public WebDriver getDriver() {
-		return driver;
+	public AccountPage loginToApplication(String emailText, String passwordText) {
+		enterUsernameEmail(emailText);
+		enterPassword(passwordText);
+		return clickLoginButton();
 	}
-	
+
 	public void clearPassword() {
 		passwordField.clear();
 	}
@@ -91,7 +90,14 @@ public class LoginPage {
 	}
 	
 	public boolean verifyLoginBreadCrumb(){
-		return loginBreaddCrumb.isDisplayed();
+		boolean b = false;
+		try {
+			b =  loginBreaddCrumb.isDisplayed();
+		}catch(NoSuchElementException e)
+		{
+			b = false;
+		}
+		return b;
 	}
 	
 	public void clickOnLoginBreadCrumb(){
@@ -99,15 +105,34 @@ public class LoginPage {
 	}
 	
 	public boolean verifyNewCustomerHeadingOnLoginPage() {
-		return newCustomerHeading.isDisplayed();
+		boolean b = false;
+		try {
+			b =  newCustomerHeading.isDisplayed();
+		}catch(NoSuchElementException e)
+		{
+			b = false;
+		}
+		return b;
 	}
 	
 	public String getTextOfNewCustomerHeadingOnLoginPage() {
-		return newCustomerHeading.getText();
+		String newCustomerHeadingText = null;
+		try {
+			newCustomerHeadingText = newCustomerHeading.getText();
+		} catch (NoSuchElementException e) {
+			newCustomerHeadingText = null;
+		}
+		return newCustomerHeadingText;
 	}
 	
 	public String getTextReturningCustomerHeadingOnLoginPage() {
-		return returningCustomerHeading.getText();
+		String returningCustomerHeadingText = null;
+		try {
+			returningCustomerHeadingText = returningCustomerHeading.getText();
+		} catch (NoSuchElementException e) {
+			returningCustomerHeadingText = null;
+		}
+		return returningCustomerHeadingText;
 	}
 	
 	public RegisterPage clickOnContinueButtonOnLoginPage(){
@@ -133,7 +158,13 @@ public class LoginPage {
 	}
 	
 	public String getWarningMessage(){
-		return warningMessage.getText();
+		String warningMessageText = null;
+		try {
+			warningMessageText = warningMessage.getText();
+		} catch (NoSuchElementException e) {
+			warningMessageText = null;
+		}
+		return warningMessageText;
 	}
 	
 	public String getUserNamePlaceholder(){
