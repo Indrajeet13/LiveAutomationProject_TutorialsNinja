@@ -21,14 +21,7 @@ public class ContactUsPage extends RootPage{
 	
 	
 	public boolean didWeNavigateToContactUsPage() {
-		boolean b = false;
-		try {
-			b =  contactUSBreadcrum.isDisplayed();
-		}catch(NoSuchElementException e)
-		{
-			b = false;
-		}
-		return b;
+		return isElementDisplayed(contactUSBreadcrum);
 	}
 	
 	

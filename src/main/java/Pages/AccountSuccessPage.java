@@ -34,24 +34,11 @@ public class AccountSuccessPage extends RootPage{
 	public boolean isUserLoggedIn() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	    wait.until(ExpectedConditions.visibilityOf(logoutOption));
-	    boolean b = false;
-		try {
-			b =  logoutOption.isDisplayed();
-		}catch(NoSuchElementException e)
-		{
-			b = false;
-		}
-		return b;
+	    return isElementDisplayed(logoutOption);
 	}
 	
 	public String getPageHeading() {
-		String pageHeadingText = null;
-		try {
-			pageHeadingText = pageHeading.getText();
-		} catch (NoSuchElementException e) {
-			pageHeadingText = null;
-		}
-		return pageHeadingText;
+		return getTextOfElements(pageHeading);
 	}
 	
 	public AccountPage clickOnContinueButton() {
@@ -60,14 +47,7 @@ public class AccountSuccessPage extends RootPage{
 	}
 	
 	public boolean didWeNavigateToAccountSucessPage() {
-		 boolean b = false;
-			try {
-				b =  myAccountHeading.isDisplayed();
-			}catch(NoSuchElementException e)
-			{
-				b = false;
-			}
-			return b;
+		return isElementDisplayed(myAccountHeading); 
 	}
 	
 }

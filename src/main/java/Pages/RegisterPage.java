@@ -1,7 +1,6 @@
 package Pages;
 
 import java.io.File;
-import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.*;
@@ -170,63 +169,28 @@ public class RegisterPage extends RootPage{
 	}
 
 	public String getFirstNameWarningMessage() {
-		String firstNameWarningMessageText = null;
-		try {
-			firstNameWarningMessageText = firstNameWarningMessage.getText();
-		} catch (NoSuchElementException e) {
-			firstNameWarningMessageText = null;
-		}
-		return firstNameWarningMessageText;
+		return getTextOfElements(firstNameWarningMessage);
 	}
 
 	public String getLastNameWarningMessage() {
-		String lastNameWarningMessageText = null;
-		try {
-			lastNameWarningMessageText = lastNameWarningMessage.getText();
-		} catch (NoSuchElementException e) {
-			lastNameWarningMessageText = null;
-		}
-		return lastNameWarningMessageText;
+		return getTextOfElements(lastNameWarningMessage);
 	}
 
 	public String getEmailWarningMessage() {
-		String emailWarningMessageText = null;
-		try {
-			emailWarningMessageText = emailWarningMessage.getText();
-		} catch (NoSuchElementException e) {
-			emailWarningMessageText = null;
-		}
-		return emailWarningMessageText;
+		return getTextOfElements(emailWarningMessage);
 	}
 
 	public String getTelephoneWarningMessage() {
-		String telephoneWarningMessageText = null;
-		try {
-			telephoneWarningMessageText = telephoneWarningMessage.getText();
-		} catch (NoSuchElementException e) {
-			telephoneWarningMessageText = null;
-		}
-		return telephoneWarningMessageText;
+		return getTextOfElements(telephoneWarningMessage);
 	}
 
 	public String getPasswordWarningMessage() {
-		String passwordWarningMessageText = null;
-		try {
-			passwordWarningMessageText = passwordWarningMessage.getText();
-		} catch (NoSuchElementException e) {
-			passwordWarningMessageText = null;
-		}
-		return passwordWarningMessageText;
+		return getTextOfElements(passwordWarningMessage);
 	}
+	
 
 	public String getPrivacyPolicyWarningMessage() {
-		String privacyPolicyWarningMessageText = null;
-		try {
-			privacyPolicyWarningMessageText = privacyPolicyWarningMessage.getText();
-		} catch (NoSuchElementException e) {
-			privacyPolicyWarningMessageText = null;
-		}
-		return privacyPolicyWarningMessageText;
+		return getTextOfElements(privacyPolicyWarningMessage);
 	}
 
 	public void clickOnYesNewsLetter() {
@@ -234,14 +198,7 @@ public class RegisterPage extends RootPage{
 	}
 
 	public boolean didWeNavigateToRegisterAccountPage() {
-		boolean b = false;
-		try {
-			b =  registerAccountHeading.isDisplayed();
-		}catch(NoSuchElementException e)
-		{
-			b = false;
-		}
-		return b;
+		return isElementDisplayed(registerAccountHeading);
 	}
 
 	public void clickOnMyAccountDopMenu() {
@@ -254,27 +211,15 @@ public class RegisterPage extends RootPage{
 	}
 
 	public String getWarningMessage() {
-		String warningMessageText = null;
-		try {
-			warningMessageText = warningMessage.getText();
-		} catch (NoSuchElementException e) {
-			warningMessageText = null;
-		}
-		return warningMessageText;
+		return getTextOfElements(warningMessage);
 	}
 
 	public String getEmailAddressAlreadyExistWarningMessage() {
-		String emailAddessAlreadyExistWarningText = null;
-		try {
-			emailAddessAlreadyExistWarningText = emailAddessAlreadyExistWarning.getText();
-		} catch (NoSuchElementException e) {
-			emailAddessAlreadyExistWarningText = null;
-		}
-		return emailAddessAlreadyExistWarningText;
+		return getTextOfElements(emailAddessAlreadyExistWarning);
 	}
 
 	public String getEmailValidationMessage() {
-		return emailField.getDomProperty("validationMessage");
+		return getDomAttributeOfElement(emailField,"validationMessage");
 	}
 	
 	public WebElement getRegistrationForm() {
@@ -286,27 +231,27 @@ public class RegisterPage extends RootPage{
 	}
 
 	public String getEmailDomAttributePlaceholder() {
-		return emailField.getDomAttribute("placeholder");
+		return getDomAttributeOfElement(emailField,"placeholder");
 	}
 
 	public String getFirstNameDomAttributePlaceholder() {
-		return firstNameField.getDomAttribute("placeholder");
+		return getDomAttributeOfElement(firstNameField,"placeholder");
 	}
 
 	public String getLastNameDomAttributePlaceholder() {
-		return lastNameField.getDomAttribute("placeholder");
+		return getDomAttributeOfElement(lastNameField,"placeholder");
 	}
 
 	public String getTelephoneDomAttributePlaceholder() {
-		return telephoneField.getDomAttribute("placeholder");
+		return getDomAttributeOfElement(telephoneField,"placeholder");
 	}
 
 	public String getPasswordDomAttributePlaceholder() {
-		return passwordField.getDomAttribute("placeholder");
+		return getDomAttributeOfElement(passwordField,"placeholder");
 	}
 
 	public String getConfirmPasswordDomAttributePlaceholder() {
-		return passwordConfirmField.getDomAttribute("placeholder");
+		return getDomAttributeOfElement(passwordConfirmField,"placeholder");
 	}
 
 	public String getFirstNameLabelContent(WebDriver driver) {
@@ -446,14 +391,7 @@ public class RegisterPage extends RootPage{
 	}
 	
 	public boolean passworWarningIsDisplayed(){
-		boolean b = false;
-		try {
-			b =  passwordWarningMessage.isDisplayed();
-		}catch(NoSuchElementException e)
-		{
-			b = false;
-		}
-		return b;
+		return isElementDisplayed(passwordWarningMessage);
 	}
 	
 	public String getPasswordConfirmFieldHeight() {
@@ -491,36 +429,19 @@ public class RegisterPage extends RootPage{
 	}
 	
 	public boolean waitAndDisplayStatusOfClosePrivacyPolicyOption(WebDriver driver, int seconds) {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(xOptionPrivacyPolicy));
-		return xButtonAlert.isDisplayed();
+		return isElementDisplayedAfterWaiting(xOptionPrivacyPolicy,seconds);
 	}
 	
 	public void clickOnXButtonOfAlert() {
 		xButtonAlert.click();	
 	}
-	
-	
 
 	public boolean getRegisterBreadcrumb() {
-		boolean b = false;
-		try {
-			b =  registerBreadcrumb.isDisplayed();
-		}catch(NoSuchElementException e)
-		{
-			b = false;
-		}
-		return b;	
+		return isElementDisplayed(registerBreadcrumb);
 	}
 	
 	public String getRegisterAccountText() {
-		String registerAccountText1 = null;
-		try {
-			registerAccountText1 = registerAccountText.getText();
-		} catch (NoSuchElementException e) {
-			registerAccountText1 = null;
-		}
-		return registerAccountText1;
+		return getTextOfElements(registerAccountText);
 	}
 	
 

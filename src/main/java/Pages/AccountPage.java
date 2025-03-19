@@ -36,13 +36,7 @@ public class AccountPage extends RootPage{
 
 	
 	public String verifyUpdationSuccessfulMessage() {
-		String messageText = null;
-		try {
-			messageText = updationSuccessMessage.getText();
-		} catch (NoSuchElementException e) {
-			messageText = null;
-		}
-		return messageText;
+		return getTextOfElements(updationSuccessMessage);
 	}
 	
 	public ChangePasswordPage clickOnChangeYourPasswordLink() {
@@ -60,14 +54,7 @@ public class AccountPage extends RootPage{
 	}
 	
 	public boolean verifyNewsletterUpdationSuccessfulMessage() {
-		boolean b = false;
-		try {
-			b =  newsletterUpdationSuccessfulMessage.isDisplayed();
-		}catch(NoSuchElementException e)
-		{
-			b = false;
-		}
-		return b;
+		return isElementDisplayed(newsletterUpdationSuccessfulMessage);
 	}
 	
 	public EditAccountInformationPage clickEditYourAccountInformationOption() {
@@ -76,14 +63,7 @@ public class AccountPage extends RootPage{
 	}
 	
 	public boolean isUserLoggedIn() {
-		boolean b = false;
-		try {
-			b =  logoutOption.isDisplayed();
-		}catch(NoSuchElementException e)
-		{
-			b = false;
-		}
-		return b;
+		return isElementDisplayed(logoutOption);
 	}
 	
 	public AccountLogoutPage clickOnLogoutOption() {

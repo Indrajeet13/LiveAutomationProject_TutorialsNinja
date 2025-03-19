@@ -22,14 +22,7 @@ public class AboutUsPage extends RootPage {
 	
 	
 	public boolean verifyAboutUsBreadCrumb(){
-		boolean b = false;
-		try {
-			b =  aboutUsBreadcrumb.isDisplayed();
-		}catch(NoSuchElementException e)
-		{
-			b = false;
-		}
-		return b;
+		return isElementDisplayed(aboutUsBreadcrumb);
 	}
 	
 	

@@ -74,5 +74,18 @@ public class Search extends Base{
 		Assert.assertTrue(searchPage.getNoOfProductsDisplayedInSearchResults() > 1);
 	}
 	
+	@Test(priority=6)
+	public void verifySearchFieldsPlaceholders() {
+		
+		headerOptions = new HeaderOptions(driver);
+		String expectedSearchBoxField = "Search";
+		Assert.assertEquals(headerOptions.getPlaceholderTextOfSearchBoxField(), expectedSearchBoxField);
+		searchPage = headerOptions.clickOnSearchButton();
+		String expectedSearchCriteriaFieldPlaceholder = "Keywords";
+		Assert.assertEquals(searchPage.getPlaceHolderTextOfSearchCriteriaField(), expectedSearchCriteriaFieldPlaceholder);
+	
+	}
+	
+	
 	
 }

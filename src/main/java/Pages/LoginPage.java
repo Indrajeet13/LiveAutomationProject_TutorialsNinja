@@ -90,14 +90,7 @@ public class LoginPage extends RootPage{
 	}
 	
 	public boolean verifyLoginBreadCrumb(){
-		boolean b = false;
-		try {
-			b =  loginBreaddCrumb.isDisplayed();
-		}catch(NoSuchElementException e)
-		{
-			b = false;
-		}
-		return b;
+		return isElementDisplayed(loginBreaddCrumb);
 	}
 	
 	public void clickOnLoginBreadCrumb(){
@@ -105,34 +98,15 @@ public class LoginPage extends RootPage{
 	}
 	
 	public boolean verifyNewCustomerHeadingOnLoginPage() {
-		boolean b = false;
-		try {
-			b =  newCustomerHeading.isDisplayed();
-		}catch(NoSuchElementException e)
-		{
-			b = false;
-		}
-		return b;
+		return isElementDisplayed(newCustomerHeading);
 	}
 	
 	public String getTextOfNewCustomerHeadingOnLoginPage() {
-		String newCustomerHeadingText = null;
-		try {
-			newCustomerHeadingText = newCustomerHeading.getText();
-		} catch (NoSuchElementException e) {
-			newCustomerHeadingText = null;
-		}
-		return newCustomerHeadingText;
+		return getTextOfElements(newCustomerHeading);
 	}
 	
 	public String getTextReturningCustomerHeadingOnLoginPage() {
-		String returningCustomerHeadingText = null;
-		try {
-			returningCustomerHeadingText = returningCustomerHeading.getText();
-		} catch (NoSuchElementException e) {
-			returningCustomerHeadingText = null;
-		}
-		return returningCustomerHeadingText;
+		return getTextOfElements(returningCustomerHeading);
 	}
 	
 	public RegisterPage clickOnContinueButtonOnLoginPage(){
@@ -158,13 +132,7 @@ public class LoginPage extends RootPage{
 	}
 	
 	public String getWarningMessage(){
-		String warningMessageText = null;
-		try {
-			warningMessageText = warningMessage.getText();
-		} catch (NoSuchElementException e) {
-			warningMessageText = null;
-		}
-		return warningMessageText;
+		return getTextOfElements(warningMessage);
 	}
 	
 	public String getUserNamePlaceholder(){

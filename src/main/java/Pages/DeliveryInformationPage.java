@@ -21,14 +21,7 @@ public class DeliveryInformationPage extends RootPage{
 	
 	
 	public boolean didWeNavigateToDeliveryInformationPage() {
-		boolean b = false;
-		try {
-			b =  deliveryInformationBreadcrum.isDisplayed();
-		}catch(NoSuchElementException e)
-		{
-			b = false;
-		}
-		return b;
+		return isElementDisplayed(deliveryInformationBreadcrum);
 	}
 	
 }

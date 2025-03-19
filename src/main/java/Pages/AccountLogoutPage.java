@@ -28,13 +28,7 @@ public class AccountLogoutPage extends RootPage {
 	private WebElement pageHeading;
 
 	public String getPageHeading() {
-		String pageHeadingText = null;
-		try {
-			pageHeadingText = pageHeading.getText();
-		} catch (NoSuchElementException e) {
-			pageHeadingText = null;
-		}
-		return pageHeadingText;
+		return getTextOfElements(pageHeading);
 	}
 
 	public LandingPage clickOnContinue() {
@@ -52,13 +46,7 @@ public class AccountLogoutPage extends RootPage {
 	}
 
 	public boolean didWeNavigateToAccountLogoutPage() {
-		boolean b = false;
-		try {
-			b = accountLogoutText.isDisplayed();
-		} catch (NoSuchElementException e) {
-			b = false;
-		}
-		return b;
+		return isElementDisplayed(accountLogoutText);
 	}
 
 }

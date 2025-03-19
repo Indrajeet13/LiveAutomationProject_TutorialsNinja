@@ -51,13 +51,7 @@ public class RightColumnOptions extends RootPage{
 	
 	
 	public boolean isLogoutRightColumnOptionAvailable() {
-		boolean b=false;
-		try {
-			b = logoutOption.isDisplayed();
-		}catch(NoSuchElementException e) {
-			b = false;
-		}
-		return b;
+		return isElementDisplayed(logoutOption);
 	}
 	
 	public AccountLogoutPage clickLogoutOptionOnRightPanel() {

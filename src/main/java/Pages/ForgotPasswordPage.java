@@ -21,14 +21,7 @@ public class ForgotPasswordPage extends RootPage{
 	
 	
 	public boolean verifyForgotPasswordBreadCrumb(){
-		boolean b = false;
-		try {
-			b =  forgotPasswordBreadcrumb.isDisplayed();
-		}catch(NoSuchElementException e)
-		{
-			b = false;
-		}
-		return b;
+		return isElementDisplayed(forgotPasswordBreadcrumb);
 	}
 	
 	

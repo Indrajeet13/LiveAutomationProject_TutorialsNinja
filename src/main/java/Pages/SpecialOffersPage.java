@@ -22,14 +22,7 @@ public class SpecialOffersPage extends RootPage{
 	
 	
 	public boolean didWeNavigateToSpecialOffersPage() {
-		boolean b = false;
-		try {
-			b =  specialOffersBreadcrumb.isDisplayed();
-		}catch(NoSuchElementException e)
-		{
-			b = false;
-		}
-		return b;
+		return isElementDisplayed(specialOffersBreadcrumb);
 	}
 	
 }

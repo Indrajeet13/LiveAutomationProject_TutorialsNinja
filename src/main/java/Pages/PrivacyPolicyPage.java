@@ -22,14 +22,7 @@ public class PrivacyPolicyPage extends RootPage{
 	
 	
 	public boolean didWeNavigateToPrivacyPolicyPage() {
-		boolean b = false;
-		try {
-			b =  privacyPolicyBreadcrum.isDisplayed();
-		}catch(NoSuchElementException e)
-		{
-			b = false;
-		}
-		return b;
+		return isElementDisplayed(privacyPolicyBreadcrum);
 	}
 	
 	

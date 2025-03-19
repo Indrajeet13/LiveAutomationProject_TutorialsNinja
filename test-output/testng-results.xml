@@ -1,25 +1,778 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="4" total="5" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="30" passed="21" failed="9" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-13T01:29:47 IST" name="Default suite" finished-at="2025-03-13T01:29:52 IST" duration-ms="4922">
+  <suite started-at="2025-03-20T01:45:14 IST" name="Default suite" finished-at="2025-03-20T01:49:03 IST" duration-ms="229267">
     <groups>
     </groups>
-    <test started-at="2025-03-13T01:29:47 IST" name="Default test" finished-at="2025-03-13T01:29:52 IST" duration-ms="4922">
-      <class name="tutorialsninja.tests.Search">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninja.tests.Search@3bb9a3ff]" started-at="2025-03-13T01:29:47 IST" name="setup" finished-at="2025-03-13T01:29:51 IST" duration-ms="3758" status="PASS">
+    <test started-at="2025-03-20T01:45:14 IST" name="Default test" finished-at="2025-03-20T01:49:03 IST" duration-ms="229267">
+      <class name="tutorialsninja.tests.Register">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:45:14 IST" name="setup" finished-at="2025-03-20T01:45:20 IST" duration-ms="5916" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifySearchResultingMultipleProducts()[pri:5, instance:tutorialsninja.tests.Search@3bb9a3ff]" started-at="2025-03-13T01:29:51 IST" name="verifySearchResultingMultipleProducts" finished-at="2025-03-13T01:29:52 IST" duration-ms="924" status="PASS">
+        <test-method signature="RegisterWithMandatoryFeilds()[pri:1, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:45:20 IST" name="RegisterWithMandatoryFeilds" finished-at="2025-03-20T01:45:22 IST" duration-ms="2140" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifySearchResultingMultipleProducts -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tutorialsninja.tests.Search@3bb9a3ff]" started-at="2025-03-13T01:29:52 IST" name="tearDown" finished-at="2025-03-13T01:29:52 IST" duration-ms="197" status="PASS">
+        </test-method> <!-- RegisterWithMandatoryFeilds -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:45:22 IST" name="teardown" finished-at="2025-03-20T01:45:22 IST" duration-ms="261" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- tutorialsninja.tests.Search -->
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:45:22 IST" name="setup" finished-at="2025-03-20T01:45:28 IST" duration-ms="5717" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyRegisterWithAllFeilds()[pri:3, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:45:28 IST" name="verifyRegisterWithAllFeilds" finished-at="2025-03-20T01:45:30 IST" duration-ms="2157" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegisterWithAllFeilds -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:45:30 IST" name="teardown" finished-at="2025-03-20T01:45:30 IST" duration-ms="232" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:45:30 IST" name="setup" finished-at="2025-03-20T01:45:35 IST" duration-ms="5041" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyRegisteringWithoutFillingFeilds()[pri:4, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:45:35 IST" name="verifyRegisteringWithoutFillingFeilds" finished-at="2025-03-20T01:45:36 IST" duration-ms="754" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegisteringWithoutFillingFeilds -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:45:36 IST" name="teardown" finished-at="2025-03-20T01:45:36 IST" duration-ms="249" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:45:36 IST" name="setup" finished-at="2025-03-20T01:45:40 IST" duration-ms="4231" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyRegisteringAccountSayingYesToNewsLetter()[pri:5, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:45:40 IST" name="verifyRegisteringAccountSayingYesToNewsLetter" finished-at="2025-03-20T01:45:44 IST" duration-ms="3565" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegisteringAccountSayingYesToNewsLetter -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:45:44 IST" name="teardown" finished-at="2025-03-20T01:45:44 IST" duration-ms="217" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:45:44 IST" name="setup" finished-at="2025-03-20T01:45:49 IST" duration-ms="4562" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyRegisteringAccountSayingNoToNewsLetter()[pri:6, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:45:49 IST" name="verifyRegisteringAccountSayingNoToNewsLetter" finished-at="2025-03-20T01:45:52 IST" duration-ms="3369" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegisteringAccountSayingNoToNewsLetter -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:45:52 IST" name="teardown" finished-at="2025-03-20T01:45:52 IST" duration-ms="198" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:45:52 IST" name="setup" finished-at="2025-03-20T01:45:57 IST" duration-ms="4497" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyNavigatingToRegisterAccountPageWithMultipleWays()[pri:7, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:45:57 IST" name="verifyNavigatingToRegisterAccountPageWithMultipleWays" finished-at="2025-03-20T01:45:59 IST" duration-ms="1783" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNavigatingToRegisterAccountPageWithMultipleWays -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:45:59 IST" name="teardown" finished-at="2025-03-20T01:45:59 IST" duration-ms="237" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:45:59 IST" name="setup" finished-at="2025-03-20T01:46:03 IST" duration-ms="3858" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyRegisteringAccountByProvidingMismatchingPasswords()[pri:8, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:46:03 IST" name="verifyRegisteringAccountByProvidingMismatchingPasswords" finished-at="2025-03-20T01:46:04 IST" duration-ms="1401" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegisteringAccountByProvidingMismatchingPasswords -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:46:04 IST" name="teardown" finished-at="2025-03-20T01:46:04 IST" duration-ms="235" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:46:04 IST" name="setup" finished-at="2025-03-20T01:46:09 IST" duration-ms="4599" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyRegisteringAccountByProvidingExistingEmail()[pri:9, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:46:09 IST" name="verifyRegisteringAccountByProvidingExistingEmail" finished-at="2025-03-20T01:46:10 IST" duration-ms="1418" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegisteringAccountByProvidingExistingEmail -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:46:10 IST" name="teardown" finished-at="2025-03-20T01:46:11 IST" duration-ms="227" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:46:11 IST" name="setup" finished-at="2025-03-20T01:46:15 IST" duration-ms="4172" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyRegisteringAccountUsingInvalidEmails()[pri:10, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:46:15 IST" name="verifyRegisteringAccountUsingInvalidEmails" finished-at="2025-03-20T01:46:19 IST" duration-ms="3919" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Please include an '@' in the email address. 'eric' is missing an '@'.] but found [null]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Please include an '@' in the email address. 'eric' is missing an '@'.] but found [null]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at tutorialsninja.tests.Register.verifyRegisteringAccountUsingInvalidEmails(Register.java:238)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegisteringAccountUsingInvalidEmails -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:46:19 IST" name="teardown" finished-at="2025-03-20T01:46:19 IST" duration-ms="241" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:46:19 IST" name="setup" finished-at="2025-03-20T01:46:23 IST" duration-ms="4134" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyRegisteringAccountByProvidingInvalidTelephone()[pri:11, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:46:23 IST" name="verifyRegisteringAccountByProvidingInvalidTelephone" finished-at="2025-03-20T01:46:28 IST" duration-ms="4871" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Telephone number does not appear to be valid message is missing: This is a bug.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Telephone number does not appear to be valid message is missing: This is a bug.
+at org.testng.Assert.fail(Assert.java:99)
+at tutorialsninja.tests.Register.verifyRegisteringAccountByProvidingInvalidTelephone(Register.java:359)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegisteringAccountByProvidingInvalidTelephone -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:46:28 IST" name="teardown" finished-at="2025-03-20T01:46:28 IST" duration-ms="246" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:46:28 IST" name="setup" finished-at="2025-03-20T01:46:32 IST" duration-ms="3622" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyRegisteringAccountByProvidingEntriesUsingKeyboardActions()[pri:12, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:46:32 IST" name="verifyRegisteringAccountByProvidingEntriesUsingKeyboardActions" finished-at="2025-03-20T01:46:43 IST" duration-ms="10908" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegisteringAccountByProvidingEntriesUsingKeyboardActions -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:46:43 IST" name="teardown" finished-at="2025-03-20T01:46:43 IST" duration-ms="264" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:46:43 IST" name="setup" finished-at="2025-03-20T01:46:47 IST" duration-ms="4232" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyPlaceholdersOfTextFieldsInRegisterAccountPage()[pri:13, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:46:47 IST" name="verifyPlaceholdersOfTextFieldsInRegisterAccountPage" finished-at="2025-03-20T01:46:47 IST" duration-ms="184" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPlaceholdersOfTextFieldsInRegisterAccountPage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:46:47 IST" name="teardown" finished-at="2025-03-20T01:46:48 IST" duration-ms="223" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:46:48 IST" name="setup" finished-at="2025-03-20T01:46:52 IST" duration-ms="4628" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyMandatoryFieldsInRegisterAccountPage()[pri:14, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:46:52 IST" name="verifyMandatoryFieldsInRegisterAccountPage" finished-at="2025-03-20T01:46:53 IST" duration-ms="283" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMandatoryFieldsInRegisterAccountPage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:46:53 IST" name="teardown" finished-at="2025-03-20T01:46:53 IST" duration-ms="202" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:46:53 IST" name="setup" finished-at="2025-03-20T01:46:57 IST" duration-ms="4427" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyDatabaseTestingOfRegisteringAccount()[pri:15, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:46:57 IST" name="verifyDatabaseTestingOfRegisteringAccount" finished-at="2025-03-20T01:46:58 IST" duration-ms="1194" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Your Account Has Been Created!] but found [Register Account]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Your Account Has Been Created!] but found [Register Account]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at tutorialsninja.tests.Register.verifyDatabaseTestingOfRegisteringAccount(Register.java:465)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDatabaseTestingOfRegisteringAccount -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:46:58 IST" name="teardown" finished-at="2025-03-20T01:46:59 IST" duration-ms="224" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:46:59 IST" name="setup" finished-at="2025-03-20T01:47:02 IST" duration-ms="3932" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyRegisteringAccountByProvidingOnlySpace()[pri:16, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:47:02 IST" name="verifyRegisteringAccountByProvidingOnlySpace" finished-at="2025-03-20T01:47:04 IST" duration-ms="1444" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegisteringAccountByProvidingOnlySpace -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:47:04 IST" name="teardown" finished-at="2025-03-20T01:47:04 IST" duration-ms="224" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:47:05 IST" name="setup" finished-at="2025-03-20T01:47:09 IST" duration-ms="3935" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyRegisteringAccountByCheckingThePasswordStandards(java.util.HashMap)[pri:17, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:47:09 IST" name="verifyRegisteringAccountByCheckingThePasswordStandards" data-provider="PasswordSupplier" finished-at="2025-03-20T01:47:09 IST" duration-ms="419" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{ =12345.0}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Keys to send should be a not null CharSequence]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy14.sendKeys(Unknown Source)
+at Pages.RegisterPage.enterPassword(RegisterPage.java:155)
+at tutorialsninja.tests.Register.verifyRegisteringAccountByCheckingThePasswordStandards(Register.java:523)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegisteringAccountByCheckingThePasswordStandards -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:47:09 IST" name="teardown" finished-at="2025-03-20T01:47:09 IST" duration-ms="240" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:47:09 IST" name="setup" finished-at="2025-03-20T01:47:14 IST" duration-ms="4580" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyRegisteringAccountByCheckingThePasswordStandards(java.util.HashMap)[pri:17, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:47:14 IST" name="verifyRegisteringAccountByCheckingThePasswordStandards" data-provider="PasswordSupplier" finished-at="2025-03-20T01:47:15 IST" duration-ms="447" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{ =abcdefg}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Keys to send should be a not null CharSequence]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy14.sendKeys(Unknown Source)
+at Pages.RegisterPage.enterPassword(RegisterPage.java:155)
+at tutorialsninja.tests.Register.verifyRegisteringAccountByCheckingThePasswordStandards(Register.java:523)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegisteringAccountByCheckingThePasswordStandards -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:47:15 IST" name="teardown" finished-at="2025-03-20T01:47:15 IST" duration-ms="233" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:47:15 IST" name="setup" finished-at="2025-03-20T01:47:19 IST" duration-ms="4027" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyRegisteringAccountByCheckingThePasswordStandards(java.util.HashMap)[pri:17, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:47:19 IST" name="verifyRegisteringAccountByCheckingThePasswordStandards" data-provider="PasswordSupplier" finished-at="2025-03-20T01:47:19 IST" duration-ms="432" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{ =1245asas}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Keys to send should be a not null CharSequence]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy14.sendKeys(Unknown Source)
+at Pages.RegisterPage.enterPassword(RegisterPage.java:155)
+at tutorialsninja.tests.Register.verifyRegisteringAccountByCheckingThePasswordStandards(Register.java:523)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegisteringAccountByCheckingThePasswordStandards -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:47:19 IST" name="teardown" finished-at="2025-03-20T01:47:19 IST" duration-ms="236" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:47:19 IST" name="setup" finished-at="2025-03-20T01:47:24 IST" duration-ms="4250" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyRegisteringAccountByCheckingThePasswordStandards(java.util.HashMap)[pri:17, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:47:24 IST" name="verifyRegisteringAccountByCheckingThePasswordStandards" data-provider="PasswordSupplier" finished-at="2025-03-20T01:47:24 IST" duration-ms="429" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{ =abs1212$}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Keys to send should be a not null CharSequence]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy14.sendKeys(Unknown Source)
+at Pages.RegisterPage.enterPassword(RegisterPage.java:155)
+at tutorialsninja.tests.Register.verifyRegisteringAccountByCheckingThePasswordStandards(Register.java:523)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegisteringAccountByCheckingThePasswordStandards -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:47:24 IST" name="teardown" finished-at="2025-03-20T01:47:24 IST" duration-ms="224" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:47:24 IST" name="setup" finished-at="2025-03-20T01:47:28 IST" duration-ms="4132" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyRegisteringAccountByCheckingThePasswordStandards(java.util.HashMap)[pri:17, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:47:28 IST" name="verifyRegisteringAccountByCheckingThePasswordStandards" data-provider="PasswordSupplier" finished-at="2025-03-20T01:47:29 IST" duration-ms="536" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{ =ABCD123#}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Keys to send should be a not null CharSequence]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy14.sendKeys(Unknown Source)
+at Pages.RegisterPage.enterPassword(RegisterPage.java:155)
+at tutorialsninja.tests.Register.verifyRegisteringAccountByCheckingThePasswordStandards(Register.java:523)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegisteringAccountByCheckingThePasswordStandards -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:47:29 IST" name="teardown" finished-at="2025-03-20T01:47:29 IST" duration-ms="239" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:47:29 IST" name="setup" finished-at="2025-03-20T01:47:33 IST" duration-ms="3924" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyRegisteringAccountFielsHeightWidthAlignment()[pri:18, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:47:33 IST" name="verifyRegisteringAccountFielsHeightWidthAlignment" finished-at="2025-03-20T01:47:44 IST" duration-ms="10824" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Password field accepts more than 20 characters! expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Password field accepts more than 20 characters! expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertTrue(Assert.java:45)
+at tutorialsninja.tests.Register.verifyRegisteringAccountFielsHeightWidthAlignment(Register.java:662)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegisteringAccountFielsHeightWidthAlignment -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:47:44 IST" name="teardown" finished-at="2025-03-20T01:47:44 IST" duration-ms="277" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:47:44 IST" name="setup" finished-at="2025-03-20T01:47:52 IST" duration-ms="7355" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyHeadingAndTrailingSpacesWhileRegisteringPage()[pri:19, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:47:52 IST" name="verifyHeadingAndTrailingSpacesWhileRegisteringPage" finished-at="2025-03-20T01:47:57 IST" duration-ms="5420" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHeadingAndTrailingSpacesWhileRegisteringPage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:47:57 IST" name="teardown" finished-at="2025-03-20T01:47:58 IST" duration-ms="838" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:47:58 IST" name="setup" finished-at="2025-03-20T01:48:02 IST" duration-ms="4483" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyPrivacyPolicyFieldsOnRegisteringAccountPage()[pri:20, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:48:02 IST" name="verifyPrivacyPolicyFieldsOnRegisteringAccountPage" finished-at="2025-03-20T01:48:02 IST" duration-ms="46" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPrivacyPolicyFieldsOnRegisteringAccountPage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:48:02 IST" name="teardown" finished-at="2025-03-20T01:48:03 IST" duration-ms="422" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:48:03 IST" name="setup" finished-at="2025-03-20T01:48:08 IST" duration-ms="4901" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyRegisteringAccountWithoutPrivacyPolicySelection()[pri:21, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:48:08 IST" name="verifyRegisteringAccountWithoutPrivacyPolicySelection" finished-at="2025-03-20T01:48:09 IST" duration-ms="1330" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegisteringAccountWithoutPrivacyPolicySelection -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:48:09 IST" name="teardown" finished-at="2025-03-20T01:48:09 IST" duration-ms="360" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:48:09 IST" name="setup" finished-at="2025-03-20T01:48:13 IST" duration-ms="3898" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyRegisteringAccountVisibilityTogglingOfPasswordFields()[pri:22, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:48:13 IST" name="verifyRegisteringAccountVisibilityTogglingOfPasswordFields" finished-at="2025-03-20T01:48:13 IST" duration-ms="62" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegisteringAccountVisibilityTogglingOfPasswordFields -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:48:13 IST" name="teardown" finished-at="2025-03-20T01:48:14 IST" duration-ms="256" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:48:14 IST" name="setup" finished-at="2025-03-20T01:48:18 IST" duration-ms="3991" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyWorkingOfEveryLinkOnRegisterAccount()[pri:23, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:48:18 IST" name="verifyWorkingOfEveryLinkOnRegisterAccount" finished-at="2025-03-20T01:48:41 IST" duration-ms="23099" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyWorkingOfEveryLinkOnRegisterAccount -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:48:41 IST" name="teardown" finished-at="2025-03-20T01:48:41 IST" duration-ms="279" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:48:41 IST" name="setup" finished-at="2025-03-20T01:48:45 IST" duration-ms="3533" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyRegisteringAccountWithoutEnteringPasswordIntoPasswordConfirmField()[pri:24, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:48:45 IST" name="verifyRegisteringAccountWithoutEnteringPasswordIntoPasswordConfirmField" finished-at="2025-03-20T01:48:46 IST" duration-ms="1569" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegisteringAccountWithoutEnteringPasswordIntoPasswordConfirmField -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:48:46 IST" name="teardown" finished-at="2025-03-20T01:48:46 IST" duration-ms="220" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:48:46 IST" name="setup" finished-at="2025-03-20T01:48:50 IST" duration-ms="3869" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyBreadcrumbTitleHeadingRegisterAccount()[pri:25, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:48:50 IST" name="verifyBreadcrumbTitleHeadingRegisterAccount" finished-at="2025-03-20T01:48:50 IST" duration-ms="265" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyBreadcrumbTitleHeadingRegisterAccount -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:48:50 IST" name="teardown" finished-at="2025-03-20T01:48:51 IST" duration-ms="225" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:48:51 IST" name="setup" finished-at="2025-03-20T01:48:54 IST" duration-ms="3758" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyUIOfRegisterAccountPage()[pri:26, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:48:54 IST" name="verifyUIOfRegisterAccountPage" finished-at="2025-03-20T01:48:56 IST" duration-ms="1178" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUIOfRegisterAccountPage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:48:56 IST" name="teardown" finished-at="2025-03-20T01:48:56 IST" duration-ms="211" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:48:56 IST" name="setup" finished-at="2025-03-20T01:49:00 IST" duration-ms="4374" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyRegisteringAccountInDifferentEnvironments()[pri:27, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:49:00 IST" name="verifyRegisteringAccountInDifferentEnvironments" finished-at="2025-03-20T01:49:03 IST" duration-ms="2448" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegisteringAccountInDifferentEnvironments -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninja.tests.Register@7ec7ffd3]" started-at="2025-03-20T01:49:03 IST" name="teardown" finished-at="2025-03-20T01:49:03 IST" duration-ms="207" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- tutorialsninja.tests.Register -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

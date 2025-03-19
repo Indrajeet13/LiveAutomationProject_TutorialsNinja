@@ -21,14 +21,7 @@ public class ProductReturnsPage extends RootPage{
 	
 	
 	public boolean didWeNavigateToProductReturnsPage() {
-		boolean b = false;
-		try {
-			b =  productReturnsText.isDisplayed();
-		}catch(NoSuchElementException e)
-		{
-			b = false;
-		}
-		return b;
+		return isElementDisplayed(productReturnsText);
 	}
 	
 	

@@ -21,14 +21,7 @@ public class AffiliateProgramPage extends RootPage{
 	
 	
 	public boolean didWeNavigateToAffiliateProgramPage() {
-		boolean b = false;
-		try {
-			b =  affiliateProgramText.isDisplayed();
-		}catch(NoSuchElementException e)
-		{
-			b = false;
-		}
-		return b;
+		return isElementDisplayed(affiliateProgramText);
 	}
 	
 }

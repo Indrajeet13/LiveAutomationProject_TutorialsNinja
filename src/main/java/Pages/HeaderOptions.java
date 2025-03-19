@@ -51,29 +51,23 @@ public class HeaderOptions extends RootPage{
 	@FindBy(name = "search")
 	private WebElement searchBoxField;
 	
+
+	
+	
+	public  String getPlaceholderTextOfSearchBoxField() {
+		return getDomAttributeOfElement(searchBoxField,"Placeholder");
+	}
+	
 	public  void enterProductIntoSearchBoxField(String productName) {
 		searchBoxField.sendKeys(productName);
 	}
 	
 	public boolean isLogoutOptionAvailable() {
-		boolean b=false;
-		try {
-			b = logoutOption.isDisplayed();
-		}catch(NoSuchElementException e) {
-			b = false;
-		}
-		return b;
+		return isElementDisplayed(logoutOption);
 	}
 	
 	public boolean isLoginOptionAvailable() {
-		boolean b = false;
-		try {
-			b =  loginOption.isDisplayed();
-		}catch(NoSuchElementException e)
-		{
-			b = false;
-		}
-		return b;
+		return isElementDisplayed(loginOption);
 	}
 	
 	public AccountLogoutPage clickLogoutOption() {
@@ -133,13 +127,6 @@ public class HeaderOptions extends RootPage{
 	}
 
 	public boolean getAccountBreadcrumb() {
-		boolean b = false;
-		try {
-			b =  accountBreadcrumb.isDisplayed();
-		}catch(NoSuchElementException e)
-		{
-			b = false;
-		}
-		return b;
+		return isElementDisplayed(accountBreadcrumb);
 	}
 }

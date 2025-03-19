@@ -42,14 +42,7 @@ public class ChangePasswordPage extends RootPage{
 	}
 	
 	public boolean didWeNavigateToPasswordConfirmPage() {
-		boolean b = false;
-		try {
-			b =  changePasswordBreadcrumb.isDisplayed();
-		}catch(NoSuchElementException e)
-		{
-			b = false;
-		}
-		return b;
+		return isElementDisplayed(changePasswordBreadcrumb);
 	}
 	
 	

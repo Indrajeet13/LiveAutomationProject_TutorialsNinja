@@ -21,13 +21,6 @@ public class SiteMapPage extends RootPage{
 	
 	
 	public boolean didWeNavigateToSiteMapPage() {
-		boolean b = false;
-		try {
-			b =  siteMapBreadcrumb.isDisplayed();
-		}catch(NoSuchElementException e)
-		{
-			b = false;
-		}
-		return b;
+		return isElementDisplayed(siteMapBreadcrumb);
 	}
 }

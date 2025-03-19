@@ -2,11 +2,8 @@ package Pages;
 
 import java.util.List;
 
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.*;
 
 import Pages.root.RootPage;
 
@@ -33,59 +30,35 @@ public class SearchPage extends RootPage{
 	@FindBy(xpath="//div[@class='caption']")
 	private List<WebElement> noOfProducts;
 	
+	@FindBy(id="input-search")
+	private WebElement searchCriteriaField;
+	
+	
+	
+	
+	public String getPlaceHolderTextOfSearchCriteriaField() {
+		return getDomAttributeOfElement(searchCriteriaField,"placeholder");
+	}
+
+	
 	public int getNoOfProductsDisplayedInSearchResults() {
-		int n = 0;
-		try {
-			n = noOfProducts.size();
-		}catch(NoSuchElementException e) {
-			n = 0;
-		}
-		return n;
+		return getElementCount(noOfProducts);
 	}
 	
-	
 	public String getNoProductMessage(){
-		String noProductMessageText=null;
-		try {
-			noProductMessageText = noProductMessage.getText();
-		}catch(NoSuchElementException e) {
-			noProductMessageText=null;
-		}
-		return noProductMessageText;
+		return getTextOfElements(noProductMessage);
 	}
 	
 	public boolean isExistingProductDisplayed(){
-		boolean b = false;
-		try {
-			b =  existingProduct.isDisplayed();
-		}catch(NoSuchElementException e)
-		{
-			b = false;
-		}
-		return b;
+		return isElementDisplayed(existingProduct);
 	}
 	
 	public boolean verifySearchText(){
-		boolean b = false;
-		try {
-			b =  searchTextVerify.isDisplayed();
-		}catch(NoSuchElementException e)
-		{
-			b = false;
-		}
-		return b;
+		return isElementDisplayed(searchTextVerify);
 	}
 	
 	public boolean didWeNavigateToSearcPage(){
-		boolean b = false;
-		try {
-			b =  searchBreadcrumb.isDisplayed();
-		}catch(NoSuchElementException e)
-		{
-			b = false;
-		}
-		return b;
+		return isElementDisplayed(searchBreadcrumb);
 	}
-	
 	
 }

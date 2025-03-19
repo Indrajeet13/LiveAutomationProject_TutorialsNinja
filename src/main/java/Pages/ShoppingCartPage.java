@@ -21,14 +21,7 @@ public class ShoppingCartPage extends RootPage{
 	
 	
 	public boolean didWeNavigateToShoppingCartPage(){
-		boolean b = false;
-		try {
-			b =  shoppingCartBreadCrumb.isDisplayed();
-		}catch(NoSuchElementException e)
-		{
-			b = false;
-		}
-		return b;
+		return isElementDisplayed(shoppingCartBreadCrumb);
 	}
 	
 	

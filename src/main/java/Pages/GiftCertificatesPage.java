@@ -21,14 +21,7 @@ public class GiftCertificatesPage extends RootPage{
 	
 	
 	public boolean didWeNavigateToGiftCertificatesPage() {
-		boolean b = false;
-		try {
-			b =  giftCertificatesBreadcrumb.isDisplayed();
-		}catch(NoSuchElementException e)
-		{
-			b = false;
-		}
-		return b;
+		return isElementDisplayed(giftCertificatesBreadcrumb);
 	}
 	
 }

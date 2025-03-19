@@ -22,14 +22,7 @@ public class BrandsPage extends RootPage{
 	
 	
 	public boolean didWeNavigateToBrandsPage() {
-		boolean b = false;
-		try {
-			b =  brandsBreadcrum.isDisplayed();
-		}catch(NoSuchElementException e)
-		{
-			b = false;
-		}
-		return b;
+		return isElementDisplayed(brandsBreadcrum);
 	}
 	
 	

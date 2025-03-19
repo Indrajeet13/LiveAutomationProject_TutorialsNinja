@@ -21,14 +21,7 @@ public class TermsAndConditionPage extends RootPage{
 	
 	
 	public boolean didWeNavigateToTermsAndConditionPage() {
-		boolean b = false;
-		try {
-			b =  termsAndConditionBreadcrum.isDisplayed();
-		}catch(NoSuchElementException e)
-		{
-			b = false;
-		}
-		return b;
+		return isElementDisplayed(termsAndConditionBreadcrum);
 	}
 	
 	

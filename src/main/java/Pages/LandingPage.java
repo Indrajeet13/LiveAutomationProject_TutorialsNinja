@@ -63,14 +63,7 @@ public class LandingPage extends RootPage{
 	}
 	
 	public boolean isFeaturedHeadingDisplayed(){
-		boolean b = false;
-		try {
-			b =  featuredHeading.isDisplayed();
-		}catch(NoSuchElementException e)
-		{
-			b = false;
-		}
-		return b;
+		return isElementDisplayed(featuredHeading);
 	}
 	
 	public LoginPage selectLoginOption()

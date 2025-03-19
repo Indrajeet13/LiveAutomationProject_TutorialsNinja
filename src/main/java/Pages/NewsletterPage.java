@@ -35,14 +35,7 @@ public class NewsletterPage extends RootPage{
 	}
 	
 	public boolean verifyNewsletterSubscriptionHeading() {
-		boolean b = false;
-		try {
-			b =  newsletterSubscriptionHeading.isDisplayed();
-		}catch(NoSuchElementException e)
-		{
-			b = false;
-		}
-		return b;
+		return isElementDisplayed(newsletterSubscriptionHeading);
 	}
 	
 	public AccountPage clickOnContinueButtonOnNewsletterPage() {
