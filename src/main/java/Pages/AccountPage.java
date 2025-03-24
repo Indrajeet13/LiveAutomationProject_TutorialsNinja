@@ -3,11 +3,17 @@ package Pages;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.*;
 import Pages.root.RootPage;
+<<<<<<< HEAD
 import utils.ElementsUtilities;
 
 public class AccountPage extends RootPage{
 	
 	ElementsUtilities elementsUtilities;
+=======
+
+public class AccountPage extends RootPage{
+	
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 
 	public AccountPage(WebDriver driver){
 		super(driver);
@@ -39,7 +45,11 @@ public class AccountPage extends RootPage{
 
 	
 	public String verifyUpdationSuccessfulMessage() {
+<<<<<<< HEAD
 		return elementsUtilities.getTextOfElements(updationSuccessMessage);
+=======
+		return getTextOfElements(updationSuccessMessage);
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 	}
 	
 	public ChangePasswordPage clickOnChangeYourPasswordLink() {
@@ -57,7 +67,11 @@ public class AccountPage extends RootPage{
 	}
 	
 	public boolean verifyNewsletterUpdationSuccessfulMessage() {
+<<<<<<< HEAD
 		return elementsUtilities.isElementDisplayed(newsletterUpdationSuccessfulMessage);
+=======
+		return isElementDisplayed(newsletterUpdationSuccessfulMessage);
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 	}
 	
 	public EditAccountInformationPage clickEditYourAccountInformationOption() {
@@ -66,7 +80,11 @@ public class AccountPage extends RootPage{
 	}
 	
 	public boolean isUserLoggedIn() {
+<<<<<<< HEAD
 		return elementsUtilities.isElementDisplayed(logoutOption);
+=======
+		return isElementDisplayed(logoutOption);
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 	}
 	
 	public AccountLogoutPage clickOnLogoutOption() {

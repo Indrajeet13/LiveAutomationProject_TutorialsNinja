@@ -3,12 +3,18 @@ package Pages;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.*;
 import Pages.root.RootPage;
+<<<<<<< HEAD
 import utils.ElementsUtilities;
 
 public class AccountLogoutPage extends RootPage {
 
 	ElementsUtilities elementsUtilities;
 	
+=======
+
+public class AccountLogoutPage extends RootPage {
+
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 	public AccountLogoutPage(WebDriver driver) {
 		super(driver);
 		this.driver = driver;
@@ -32,11 +38,19 @@ public class AccountLogoutPage extends RootPage {
 	private WebElement pageHeading;
 
 	public String getPageHeading() {
+<<<<<<< HEAD
 		return elementsUtilities.getTextOfElements(pageHeading);
 	}
 
 	public LandingPage clickOnContinue() {
 		elementsUtilities.clickOnElement(continueButton);
+=======
+		return getTextOfElements(pageHeading);
+	}
+
+	public LandingPage clickOnContinue() {
+		continueButton.click();
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 		return new LandingPage(driver);
 	}
 
@@ -50,7 +64,11 @@ public class AccountLogoutPage extends RootPage {
 	}
 
 	public boolean didWeNavigateToAccountLogoutPage() {
+<<<<<<< HEAD
 		return elementsUtilities.isElementDisplayed(accountLogoutText);
+=======
+		return isElementDisplayed(accountLogoutText);
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 	}
 
 }

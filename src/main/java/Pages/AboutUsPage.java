@@ -1,16 +1,19 @@
 package Pages;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.*;
 
 import Pages.root.RootPage;
+<<<<<<< HEAD
 import utils.ElementsUtilities;
 
 public class AboutUsPage extends RootPage {
 	
 	ElementsUtilities elementsUtilities;
+=======
+
+public class AboutUsPage extends RootPage {
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 	
 	public AboutUsPage(WebDriver driver){
 		super(driver);
@@ -27,7 +30,11 @@ public class AboutUsPage extends RootPage {
 
 	
 	public boolean verifyAboutUsBreadCrumb(){
+<<<<<<< HEAD
 		return elementsUtilities.isElementDisplayed(aboutUsBreadcrumb);
+=======
+		return isElementDisplayed(aboutUsBreadcrumb);
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 	}
 	
 	

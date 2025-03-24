@@ -3,11 +3,16 @@ package Pages;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.*;
 import Pages.root.RootPage;
+<<<<<<< HEAD
 import utils.ElementsUtilities;
 
 public class ChangePasswordPage extends RootPage{
 	
 	ElementsUtilities elementsUtilities;
+=======
+
+public class ChangePasswordPage extends RootPage{
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 	
 	public ChangePasswordPage(WebDriver driver){
 		super(driver);
@@ -46,7 +51,11 @@ public class ChangePasswordPage extends RootPage{
 	}
 	
 	public boolean didWeNavigateToPasswordConfirmPage() {
+<<<<<<< HEAD
 		return elementsUtilities.isElementDisplayed(changePasswordBreadcrumb);
+=======
+		return isElementDisplayed(changePasswordBreadcrumb);
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 	}
 	
 	

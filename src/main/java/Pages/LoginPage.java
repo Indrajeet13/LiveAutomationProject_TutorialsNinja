@@ -4,11 +4,17 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.*;
 import Pages.root.RootPage;
+<<<<<<< HEAD
 import utils.ElementsUtilities;
 
 public class LoginPage extends RootPage{
 	
 	ElementsUtilities elementsUtilities;
+=======
+
+public class LoginPage extends RootPage{
+	
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 
 	public LoginPage(WebDriver driver){
 		super(driver);
@@ -93,7 +99,11 @@ public class LoginPage extends RootPage{
 	}
 	
 	public boolean verifyLoginBreadCrumb(){
+<<<<<<< HEAD
 		return elementsUtilities.isElementDisplayed(loginBreaddCrumb);
+=======
+		return isElementDisplayed(loginBreaddCrumb);
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 	}
 	
 	public void clickOnLoginBreadCrumb(){
@@ -101,6 +111,7 @@ public class LoginPage extends RootPage{
 	}
 	
 	public boolean verifyNewCustomerHeadingOnLoginPage() {
+<<<<<<< HEAD
 		return elementsUtilities.isElementDisplayed(newCustomerHeading);
 	}
 	
@@ -110,6 +121,17 @@ public class LoginPage extends RootPage{
 	
 	public String getTextReturningCustomerHeadingOnLoginPage() {
 		return elementsUtilities.getTextOfElements(returningCustomerHeading);
+=======
+		return isElementDisplayed(newCustomerHeading);
+	}
+	
+	public String getTextOfNewCustomerHeadingOnLoginPage() {
+		return getTextOfElements(newCustomerHeading);
+	}
+	
+	public String getTextReturningCustomerHeadingOnLoginPage() {
+		return getTextOfElements(returningCustomerHeading);
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 	}
 	
 	public RegisterPage clickOnContinueButtonOnLoginPage(){
@@ -135,7 +157,11 @@ public class LoginPage extends RootPage{
 	}
 	
 	public String getWarningMessage(){
+<<<<<<< HEAD
 		return elementsUtilities.getTextOfElements(warningMessage);
+=======
+		return getTextOfElements(warningMessage);
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 	}
 	
 	public String getUserNamePlaceholder(){

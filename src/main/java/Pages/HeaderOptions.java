@@ -6,12 +6,18 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.*;
 import org.openqa.selenium.support.ui.*;
 import Pages.root.RootPage;
+<<<<<<< HEAD
 import utils.ElementsUtilities;
 
 public class HeaderOptions extends RootPage{
 
 	ElementsUtilities elementsUtilities;
 	
+=======
+
+public class HeaderOptions extends RootPage{
+
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 	public HeaderOptions(WebDriver driver) {
 		super(driver);
 		this.driver = driver;
@@ -56,11 +62,14 @@ public class HeaderOptions extends RootPage{
 	private WebElement searchBoxField;
 	
 
+<<<<<<< HEAD
 	
 	
 	public  String getPlaceholderTextOfSearchBoxField() {
 		return getDomAttributeOfElement(searchBoxField,"Placeholder");
 	}
+=======
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 	
 	public  void enterProductIntoSearchBoxField(String productName) {
 		elementsUtilities.enterTextIntoElement(searchBoxField, productName);
@@ -70,12 +79,33 @@ public class HeaderOptions extends RootPage{
 		return elementsUtilities.isElementDisplayed(logoutOption);
 	}
 	
+<<<<<<< HEAD
 	public boolean isLoginOptionAvailable() {
 		return elementsUtilities.isElementDisplayed(loginOption);
 	}
 	
 	public AccountLogoutPage clickLogoutOption() {
 		elementsUtilities.clickOnElement(logoutOption);
+=======
+	public  String getPlaceholderTextOfSearchBoxField() {
+		return getDomAttributeOfElement(searchBoxField,"Placeholder");
+	}
+	
+	public  void enterProductIntoSearchBoxField(String productName) {
+		searchBoxField.sendKeys(productName);
+	}
+	
+	public boolean isLogoutOptionAvailable() {
+		return isElementDisplayed(logoutOption);
+	}
+	
+	public boolean isLoginOptionAvailable() {
+		return isElementDisplayed(loginOption);
+	}
+	
+	public AccountLogoutPage clickLogoutOption() {
+		logoutOption.click();
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 		return new AccountLogoutPage(driver);
 	}
 
@@ -126,11 +156,19 @@ public class HeaderOptions extends RootPage{
 	public LandingPage clickOnHomeBreadcrumb() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(homeBreadcrumb));
+<<<<<<< HEAD
 		elementsUtilities.clickOnElement(element);
+=======
+		element.click();
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 		return new LandingPage(driver);
 	}
 
 	public boolean getAccountBreadcrumb() {
+<<<<<<< HEAD
 		return elementsUtilities.isElementDisplayed(accountBreadcrumb);
+=======
+		return isElementDisplayed(accountBreadcrumb);
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 	}
 }

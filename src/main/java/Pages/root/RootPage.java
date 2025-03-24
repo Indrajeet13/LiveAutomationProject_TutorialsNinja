@@ -44,7 +44,33 @@ public class RootPage {
 		return n;
 	}
 	
+<<<<<<< HEAD
 
+=======
+	public String getTextOfElements(WebElement element) {
+		String text = null;
+		try {
+			text = element.getText();
+		}catch(NoSuchElementException e) {
+			text = null;
+		}catch(Exception e) {
+			text = null;
+		}
+		return text;
+	}
+	
+	public boolean isElementDisplayed(WebElement element) {
+		boolean b = false;
+		try {
+			b = element.isDisplayed();
+		}catch(NoSuchElementException e) {
+			b = false;
+		}catch(Exception e) {
+			b = false;
+		}
+		return b;
+	}
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 	
 	public boolean isElementDisplayedAfterWaiting(By by, int seconds) {
 		boolean b = false;

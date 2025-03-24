@@ -1,6 +1,7 @@
 package Pages;
 
 import java.util.List;
+<<<<<<< HEAD
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,6 +15,15 @@ import utils.ElementsUtilities;
 public class SearchPage extends RootPage{
 	
 	ElementsUtilities elementsUtilities;
+=======
+
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.*;
+
+import Pages.root.RootPage;
+
+public class SearchPage extends RootPage{
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 	
 	public SearchPage(WebDriver driver){
 		super(driver);
@@ -40,6 +50,7 @@ public class SearchPage extends RootPage{
 	@FindBy(id="input-search")
 	private WebElement searchCriteriaField;
 	
+<<<<<<< HEAD
 	@FindBy(id="button-search")
 	private WebElement searchButton;
 	
@@ -61,17 +72,38 @@ public class SearchPage extends RootPage{
 	
 	public void selectSearchInProductDescriptionCheckBoxField() {
 		elementsUtilities.clickOnElement(searchInProductDescriptionSearchBoxField);	
-	}
+=======
 	
+	
+	
+	public String getPlaceHolderTextOfSearchCriteriaField() {
+		return getDomAttributeOfElement(searchCriteriaField,"placeholder");
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
+	}
+
+	
+<<<<<<< HEAD
 	public void clickOnSearchButton() {
 		elementsUtilities.clickOnElement(searchButton);	
 	}
 	
 	public void enterIntoSearchCriteriaField(String text) {
 		elementsUtilities.enterTextIntoElement(searchCriteriaField, text);
+=======
+	public int getNoOfProductsDisplayedInSearchResults() {
+		return getElementCount(noOfProducts);
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 	}
 	
+	public String getNoProductMessage(){
+		return getTextOfElements(noProductMessage);
+	}
 	
+	public boolean isExistingProductDisplayed(){
+		return isElementDisplayed(existingProduct);
+	}
+	
+<<<<<<< HEAD
 	public String getPlaceHolderTextOfSearchCriteriaField() {
 		return getDomAttributeOfElement(searchCriteriaField,"placeholder");
 	}
@@ -103,6 +135,14 @@ public class SearchPage extends RootPage{
 	
 	public boolean didWeNavigateToSearcPage(){
 		return elementsUtilities.isElementDisplayed(searchBreadcrumb);
+=======
+	public boolean verifySearchText(){
+		return isElementDisplayed(searchTextVerify);
+	}
+	
+	public boolean didWeNavigateToSearcPage(){
+		return isElementDisplayed(searchBreadcrumb);
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 	}
 	
 }

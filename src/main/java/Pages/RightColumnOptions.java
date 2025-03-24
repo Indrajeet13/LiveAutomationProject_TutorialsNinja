@@ -3,12 +3,18 @@ package Pages;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.*;
 import Pages.root.RootPage;
+<<<<<<< HEAD
 import utils.ElementsUtilities;
 
 public class RightColumnOptions extends RootPage{
 
 	ElementsUtilities elementsUtilities;
 	
+=======
+
+public class RightColumnOptions extends RootPage{
+
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 	public RightColumnOptions(WebDriver driver){
 		super(driver);
 		this.driver = driver;
@@ -51,7 +57,20 @@ public class RightColumnOptions extends RootPage{
 	
 	@FindBy(xpath = "//a[@class='list-group-item'][text()='Logout']")
 	private WebElement logoutOption;
+<<<<<<< HEAD
+=======
 	
+	
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
+	
+	public boolean isLogoutRightColumnOptionAvailable() {
+		return isElementDisplayed(logoutOption);
+	}
+	
+	public AccountLogoutPage clickLogoutOptionOnRightPanel() {
+		logoutOption.click();	
+		return new AccountLogoutPage(driver);
+	}
 	
 	
 	public boolean isLogoutRightColumnOptionAvailable() {

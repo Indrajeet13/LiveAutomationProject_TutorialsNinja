@@ -3,11 +3,17 @@ package Pages;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.*;
 import Pages.root.RootPage;
+<<<<<<< HEAD
 import utils.ElementsUtilities;
 
 public class LandingPage extends RootPage{
 	
 	ElementsUtilities elementsUtilities;
+=======
+
+public class LandingPage extends RootPage{
+	
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 	
 	public LandingPage(WebDriver driver){
 		super(driver);
@@ -37,12 +43,20 @@ public class LandingPage extends RootPage{
 	
 	
 	public SearchPage clickOnSearchButton() {
+<<<<<<< HEAD
 		elementsUtilities.clickOnElement(searchButton);
+=======
+		searchButton.click();
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 		return new SearchPage(driver);
 	}
 	
 	public void enterProductNameIntoSearchBoxField(String productNameText) {
+<<<<<<< HEAD
 		elementsUtilities.enterTextIntoElement(searchBoxField, productNameText);
+=======
+		searchBoxField.sendKeys(productNameText);
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 	}
 	
 	public RegisterPage navigateToRegisterPage() {
@@ -56,7 +70,11 @@ public class LandingPage extends RootPage{
 	}
 
 	public void clickOnMyAccount(){
+<<<<<<< HEAD
 		elementsUtilities.clickOnElement(myAcctountDropMenu);
+=======
+		myAcctountDropMenu.click();
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 	}
 	
 	public RegisterPage selectRegisterOption() {
@@ -65,7 +83,11 @@ public class LandingPage extends RootPage{
 	}
 	
 	public boolean isFeaturedHeadingDisplayed(){
+<<<<<<< HEAD
 		return elementsUtilities.isElementDisplayed(featuredHeading);
+=======
+		return isElementDisplayed(featuredHeading);
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 	}
 	
 	public LoginPage selectLoginOption() {

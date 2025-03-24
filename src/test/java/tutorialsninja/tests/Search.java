@@ -6,7 +6,12 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
+<<<<<<< HEAD
 import Pages.*;
+=======
+import Pages.HeaderOptions;
+import Pages.LandingPage;
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 import tutorialsninja.base.Base;
 import utils.Utilities;
 
@@ -85,6 +90,7 @@ public class Search extends Base{
 	
 	}
 	
+<<<<<<< HEAD
 	@Test(priority=7)
 	public void verifySearchingForProductUsingSearchCriteriaField() {
 		
@@ -119,6 +125,8 @@ public class Search extends Base{
 	}
 	
 	
+=======
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 	
 	
 }

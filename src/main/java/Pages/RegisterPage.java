@@ -7,7 +7,10 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.*;
 import org.openqa.selenium.support.ui.*;
 import Pages.root.RootPage;
+<<<<<<< HEAD
 import utils.ElementsUtilities;
+=======
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 
 public class RegisterPage extends RootPage{
 
@@ -172,6 +175,7 @@ public class RegisterPage extends RootPage{
 	}
 
 	public String getFirstNameWarningMessage() {
+<<<<<<< HEAD
 		return elementsUtilities.getTextOfElements(firstNameWarningMessage);
 	}
 
@@ -189,11 +193,34 @@ public class RegisterPage extends RootPage{
 
 	public String getPasswordWarningMessage() {
 		return elementsUtilities.getTextOfElements(passwordWarningMessage);
+=======
+		return getTextOfElements(firstNameWarningMessage);
+	}
+
+	public String getLastNameWarningMessage() {
+		return getTextOfElements(lastNameWarningMessage);
+	}
+
+	public String getEmailWarningMessage() {
+		return getTextOfElements(emailWarningMessage);
+	}
+
+	public String getTelephoneWarningMessage() {
+		return getTextOfElements(telephoneWarningMessage);
+	}
+
+	public String getPasswordWarningMessage() {
+		return getTextOfElements(passwordWarningMessage);
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 	}
 	
 
 	public String getPrivacyPolicyWarningMessage() {
+<<<<<<< HEAD
 		return elementsUtilities.getTextOfElements(privacyPolicyWarningMessage);
+=======
+		return getTextOfElements(privacyPolicyWarningMessage);
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 	}
 
 	public void clickOnYesNewsLetter() {
@@ -201,7 +228,11 @@ public class RegisterPage extends RootPage{
 	}
 
 	public boolean didWeNavigateToRegisterAccountPage() {
+<<<<<<< HEAD
 		return elementsUtilities.isElementDisplayed(registerAccountHeading);
+=======
+		return isElementDisplayed(registerAccountHeading);
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 	}
 
 	public void clickOnMyAccountDopMenu() {
@@ -214,11 +245,19 @@ public class RegisterPage extends RootPage{
 	}
 
 	public String getWarningMessage() {
+<<<<<<< HEAD
 		return elementsUtilities.getTextOfElements(warningMessage);
 	}
 
 	public String getEmailAddressAlreadyExistWarningMessage() {
 		return elementsUtilities.getTextOfElements(emailAddessAlreadyExistWarning);
+=======
+		return getTextOfElements(warningMessage);
+	}
+
+	public String getEmailAddressAlreadyExistWarningMessage() {
+		return getTextOfElements(emailAddessAlreadyExistWarning);
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 	}
 
 	public String getEmailValidationMessage() {
@@ -394,7 +433,11 @@ public class RegisterPage extends RootPage{
 	}
 	
 	public boolean passworWarningIsDisplayed(){
+<<<<<<< HEAD
 		return elementsUtilities.isElementDisplayed(passwordWarningMessage);
+=======
+		return isElementDisplayed(passwordWarningMessage);
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 	}
 	
 	public String getPasswordConfirmFieldHeight() {
@@ -440,11 +483,19 @@ public class RegisterPage extends RootPage{
 	}
 
 	public boolean getRegisterBreadcrumb() {
+<<<<<<< HEAD
 		return elementsUtilities.isElementDisplayed(registerBreadcrumb);
 	}
 	
 	public String getRegisterAccountText() {
 		return elementsUtilities.getTextOfElements(registerAccountText);
+=======
+		return isElementDisplayed(registerBreadcrumb);
+	}
+	
+	public String getRegisterAccountText() {
+		return getTextOfElements(registerAccountText);
+>>>>>>> 633e2c99f4a3d5170abf58ed8f048888131268a0
 	}
 	
 
