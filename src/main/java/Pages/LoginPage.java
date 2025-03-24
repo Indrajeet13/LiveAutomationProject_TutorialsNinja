@@ -1,18 +1,19 @@
 package Pages;
 
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.*;
+import Pages.root.RootPage;
+import utils.ElementsUtilities;
 
-public class LoginPage {
+public class LoginPage extends RootPage{
 	
-	WebDriver driver;
-	
+	ElementsUtilities elementsUtilities;
+
 	public LoginPage(WebDriver driver){
+		super(driver);
 		this.driver = driver;
+		elementsUtilities = new ElementsUtilities(driver);
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -50,13 +51,14 @@ public class LoginPage {
 	
 	
 	
-	
-	public WebDriver getDriver() {
-		return driver;
+	public AccountPage loginToApplication(String emailText, String passwordText) {
+		enterUsernameEmail(emailText);
+		enterPassword(passwordText);
+		return clickLoginButton();
 	}
-	
+
 	public void clearPassword() {
-		passwordField.clear();
+		elementsUtilities.clearTextFromTextField(passwordField);
 	}
 	
 	public String getValueForPasswordField() {
@@ -86,54 +88,54 @@ public class LoginPage {
 	}
 	
 	public ForgotPasswordPage clickOnForgottenPassword(){
-		 forgottenPassword.click();
+		elementsUtilities.clickOnElement(forgottenPassword);
 		 return new ForgotPasswordPage(driver);
 	}
 	
 	public boolean verifyLoginBreadCrumb(){
-		return loginBreaddCrumb.isDisplayed();
+		return elementsUtilities.isElementDisplayed(loginBreaddCrumb);
 	}
 	
 	public void clickOnLoginBreadCrumb(){
-		loginBreaddCrumb.click();
+		elementsUtilities.clickOnElement(loginBreaddCrumb);
 	}
 	
 	public boolean verifyNewCustomerHeadingOnLoginPage() {
-		return newCustomerHeading.isDisplayed();
+		return elementsUtilities.isElementDisplayed(newCustomerHeading);
 	}
 	
 	public String getTextOfNewCustomerHeadingOnLoginPage() {
-		return newCustomerHeading.getText();
+		return elementsUtilities.getTextOfElements(newCustomerHeading);
 	}
 	
 	public String getTextReturningCustomerHeadingOnLoginPage() {
-		return returningCustomerHeading.getText();
+		return elementsUtilities.getTextOfElements(returningCustomerHeading);
 	}
 	
 	public RegisterPage clickOnContinueButtonOnLoginPage(){
-		continueButton.click();
+		elementsUtilities.clickOnElement(continueButton);
 		return new RegisterPage(driver);
 	}
 	
 	public void clickOnRegisterOption(){
-		registerOption.click();
+		elementsUtilities.clickOnElement(registerOption);
 	}
 	
 	public void enterUsernameEmail(String emailText){
-		usernameEmailField.sendKeys(emailText);
+		elementsUtilities.enterTextIntoElement(usernameEmailField, emailText);
 	}
 	
 	public void enterPassword(String passwordText){
-		passwordField.sendKeys(passwordText);
+		elementsUtilities.enterTextIntoElement(passwordField, passwordText);
 	}
 	
 	public AccountPage clickLoginButton(){
-		loginButton.click();
+		elementsUtilities.clickOnElement(loginButton);
 		return new AccountPage(driver);
 	}
 	
 	public String getWarningMessage(){
-		return warningMessage.getText();
+		return elementsUtilities.getTextOfElements(warningMessage);
 	}
 	
 	public String getUserNamePlaceholder(){

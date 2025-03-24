@@ -1,16 +1,18 @@
 package Pages;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.*;
+import Pages.root.RootPage;
+import utils.ElementsUtilities;
 
-public class FooterOptions {
+public class FooterOptions extends RootPage{
 
-	WebDriver driver;
+	ElementsUtilities elementsUtilities;
 	
 	public FooterOptions(WebDriver driver){
+		super(driver);
 		this.driver = driver;
+		elementsUtilities = new ElementsUtilities(driver);
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -58,72 +60,72 @@ public class FooterOptions {
 	
 	
 	public LoginPage clickOnMyAccountTextOnBottom() {
-		myAccountTextOnBottom.click();	
+		elementsUtilities.clickOnElement(myAccountTextOnBottom);
 		return new LoginPage(driver);
 	}
 	
 	public DeliveryInformationPage clickOnDeliveryInformationTextOnBottom() {
-		deliveryInformationTextOnBottom.click();	
+		elementsUtilities.clickOnElement(deliveryInformationTextOnBottom);	
 		return new DeliveryInformationPage(driver);
 	}
 	
 	public PrivacyPolicyPage clickOnPrivacyPolicyTextOnBottom() {
-		privacyPolicyTextOnBottom.click();	
+		elementsUtilities.clickOnElement(privacyPolicyTextOnBottom);
 		return new PrivacyPolicyPage(driver);
 	}
 	
 	public TermsAndConditionPage clickOnTermsAndConditionTextOnBottom() {
-		termsConditionTextOnBottom.click();	
+		elementsUtilities.clickOnElement(termsConditionTextOnBottom);
 		return new TermsAndConditionPage(driver);
 	}
 	
 	public ProductReturnsPage clickOnReturnsTextOnBottom() {
-		returnsTextOnBottom.click();	
+		elementsUtilities.clickOnElement(returnsTextOnBottom);	
 		return new ProductReturnsPage(driver);
 	}
 	
 	public SiteMapPage clickOnSiteMapTextOnBottom() {
-		siteMapTextOnBottom.click();	
+		elementsUtilities.clickOnElement(siteMapTextOnBottom);
 		return new SiteMapPage(driver);
 	}
 	
 	public GiftCertificatesPage clickOnGiftCertificatesTextOnBottom() {
-		giftCertificatesTextOnBottom.click();	
+		elementsUtilities.clickOnElement(giftCertificatesTextOnBottom);
 		return new GiftCertificatesPage(driver);
 	}
 	
 	public AffiliateProgramPage clickOnAffiliateTextOnBottom() {
-		affiliateTextOnBottom.click();	
+		elementsUtilities.clickOnElement(affiliateTextOnBottom);
 		return new AffiliateProgramPage(driver);
 	}
 	
 	public SpecialOffersPage clickOnSepcialsTextOnBottom() {
-		specialsTextOnBottom.click();	
+		elementsUtilities.clickOnElement(specialsTextOnBottom);
 		return new SpecialOffersPage(driver);
 	}
 	
 	public LoginPage clickOnOrderHistoryTextOnBottom() {
-		orderHistoryTextOnBottom.click();	
+		elementsUtilities.clickOnElement(orderHistoryTextOnBottom);
 		return new LoginPage(driver);
 	}
 	
 	public LoginPage clickOnNewsLetterTextOnBottom() {
-		newsletterTextOnBottom.click();	
+		elementsUtilities.clickOnElement(newsletterTextOnBottom);
 		return new LoginPage(driver);
 	}
 	
 	public AboutUsPage clickOnAboutUsOnBottom() {
-		aboutUsTextOnBottom.click();	
+		elementsUtilities.clickOnElement(aboutUsTextOnBottom);
 		return new AboutUsPage(driver);
 	}
 	
 	public ContactUsPage clickOnContactUsOnBottom() {
-		contactUsTextOnBottom.click();	
+		elementsUtilities.clickOnElement(contactUsTextOnBottom);
 		return new ContactUsPage(driver);
 	}
 	
 	public BrandsPage clickOnBrandsTextOnBottom() {
-		brandsTextOnBottom.click();	
+		elementsUtilities.clickOnElement(brandsTextOnBottom);
 		return new BrandsPage(driver);
 	}
 	

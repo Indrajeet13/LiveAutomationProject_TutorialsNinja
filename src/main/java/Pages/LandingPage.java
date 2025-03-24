@@ -1,16 +1,18 @@
 package Pages;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.*;
+import Pages.root.RootPage;
+import utils.ElementsUtilities;
 
-public class LandingPage {
+public class LandingPage extends RootPage{
 	
-	WebDriver driver;
+	ElementsUtilities elementsUtilities;
 	
 	public LandingPage(WebDriver driver){
+		super(driver);
 		this.driver = driver;
+		elementsUtilities = new ElementsUtilities(driver);
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -26,26 +28,48 @@ public class LandingPage {
 	@FindBy(xpath="//ul[@class='dropdown-menu dropdown-menu-right']//a[normalize-space()='Login']")
 	private WebElement loginOption;
 	
+	@FindBy(name="search")
+	private WebElement searchBoxField;
 	
-	public void clickOnMyAccount()
-	{
-		myAcctountDropMenu.click();
+	@FindBy(xpath="//i[@class='fa fa-search']")
+	private WebElement searchButton;
+	
+	
+	
+	public SearchPage clickOnSearchButton() {
+		elementsUtilities.clickOnElement(searchButton);
+		return new SearchPage(driver);
 	}
 	
-	public RegisterPage selectRegisterOption()
-	{
-		registerOption.click();
+	public void enterProductNameIntoSearchBoxField(String productNameText) {
+		elementsUtilities.enterTextIntoElement(searchBoxField, productNameText);
+	}
+	
+	public RegisterPage navigateToRegisterPage() {
+		clickOnMyAccount();
+		return selectRegisterOption();
+	}
+	
+	public LoginPage navigateToLoginPage() {
+		clickOnMyAccount();
+		return selectLoginOption();
+	}
+
+	public void clickOnMyAccount(){
+		elementsUtilities.clickOnElement(myAcctountDropMenu);
+	}
+	
+	public RegisterPage selectRegisterOption() {
+		elementsUtilities.clickOnElement(registerOption);
 		return new RegisterPage(driver);
 	}
 	
-	public boolean isFeaturedHeadingDisplayed()
-	{
-		return featuredHeading.isDisplayed();
+	public boolean isFeaturedHeadingDisplayed(){
+		return elementsUtilities.isElementDisplayed(featuredHeading);
 	}
 	
-	public LoginPage selectLoginOption()
-	{
-		loginOption.click();
+	public LoginPage selectLoginOption() {
+		elementsUtilities.clickOnElement(loginOption);
 		return new LoginPage(driver);
 	}
 	

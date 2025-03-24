@@ -1,16 +1,18 @@
 package Pages;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.*;
+import Pages.root.RootPage;
+import utils.ElementsUtilities;
 
-public class GiftCertificatesPage {
+public class GiftCertificatesPage extends RootPage{
 	
-	WebDriver driver;
+	ElementsUtilities elementsUtilities;
 	
 	public GiftCertificatesPage(WebDriver driver){
+		super(driver);
 		this.driver = driver;
+		elementsUtilities = new ElementsUtilities(driver);
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -23,7 +25,7 @@ public class GiftCertificatesPage {
 	
 	
 	public boolean didWeNavigateToGiftCertificatesPage() {
-		return giftCertificatesBreadcrumb.isDisplayed();
+		return elementsUtilities.isElementDisplayed(giftCertificatesBreadcrumb);
 	}
 	
 }

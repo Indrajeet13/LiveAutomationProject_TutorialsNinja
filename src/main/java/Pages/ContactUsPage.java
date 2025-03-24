@@ -1,16 +1,18 @@
 package Pages;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.*;
+import Pages.root.RootPage;
+import utils.ElementsUtilities;
 
-public class ContactUsPage {
+public class ContactUsPage extends RootPage{
 
-	WebDriver driver;
+	ElementsUtilities elementsUtilities;
 	
 	public ContactUsPage(WebDriver driver){
+		super(driver);
 		this.driver = driver;
+		elementsUtilities = new ElementsUtilities(driver);
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -23,7 +25,7 @@ public class ContactUsPage {
 	
 	
 	public boolean didWeNavigateToContactUsPage() {
-		return contactUSBreadcrum.isDisplayed();
+		return elementsUtilities.isElementDisplayed(contactUSBreadcrum);
 	}
 	
 	

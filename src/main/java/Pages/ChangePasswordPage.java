@@ -1,16 +1,18 @@
 package Pages;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.*;
+import Pages.root.RootPage;
+import utils.ElementsUtilities;
 
-public class ChangePasswordPage {
+public class ChangePasswordPage extends RootPage{
 	
-	WebDriver driver;
+	ElementsUtilities elementsUtilities;
 	
 	public ChangePasswordPage(WebDriver driver){
+		super(driver);
 		this.driver = driver;
+		elementsUtilities = new ElementsUtilities(driver);
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -31,20 +33,20 @@ public class ChangePasswordPage {
 	
 	
 	public AccountPage clickOnContinueButton() {
-		continueButton.click();
+		elementsUtilities.clickOnElement(continueButton);
 		return new AccountPage(driver);
 	}
 	
 	public void enterConfirmPassword(String passwordText) {
-		passwordConfirmField.sendKeys(passwordText);
+		elementsUtilities.enterTextIntoElement(passwordConfirmField, passwordText);
 	}
 	
 	public void enterPassword(String passwordText) {
-		passwordField.sendKeys(passwordText);
+		elementsUtilities.enterTextIntoElement(passwordField, passwordText);
 	}
 	
 	public boolean didWeNavigateToPasswordConfirmPage() {
-		return changePasswordBreadcrumb.isDisplayed();
+		return elementsUtilities.isElementDisplayed(changePasswordBreadcrumb);
 	}
 	
 	

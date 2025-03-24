@@ -6,8 +6,12 @@
       <class name="tutorialsninja.tests.Register">
         <methods>
           <include name="setup"/>
-          <include name="teardown"/>
+          <include name="verifyRegisteringAccountByProvidingInvalidTelephone"/>
           <include name="verifyRegisteringAccountByCheckingThePasswordStandards" invocation-numbers="0 1 2 3 4"/>
+          <include name="teardown"/>
+          <include name="verifyDatabaseTestingOfRegisteringAccount"/>
+          <include name="verifyRegisteringAccountFielsHeightWidthAlignment"/>
+          <include name="verifyRegisteringAccountUsingInvalidEmails"/>
         </methods>
       </class> <!-- tutorialsninja.tests.Register -->
     </classes>

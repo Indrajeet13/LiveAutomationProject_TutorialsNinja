@@ -1,16 +1,18 @@
 package Pages;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.*;
+import Pages.root.RootPage;
+import utils.ElementsUtilities;
 
-public class TermsAndConditionPage {
+public class TermsAndConditionPage extends RootPage{
 	
-	WebDriver driver;
+	ElementsUtilities elementsUtilities;
 	
 	public TermsAndConditionPage(WebDriver driver){
+		super(driver);
 		this.driver = driver;
+		elementsUtilities = new ElementsUtilities(driver);
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -23,7 +25,7 @@ public class TermsAndConditionPage {
 	
 	
 	public boolean didWeNavigateToTermsAndConditionPage() {
-		return termsAndConditionBreadcrum.isDisplayed();
+		return elementsUtilities.isElementDisplayed(termsAndConditionBreadcrum);
 	}
 	
 	

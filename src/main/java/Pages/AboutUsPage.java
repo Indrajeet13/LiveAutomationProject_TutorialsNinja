@@ -5,12 +5,17 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class AboutUsPage {
+import Pages.root.RootPage;
+import utils.ElementsUtilities;
+
+public class AboutUsPage extends RootPage {
 	
-	WebDriver driver;
+	ElementsUtilities elementsUtilities;
 	
 	public AboutUsPage(WebDriver driver){
+		super(driver);
 		this.driver = driver;
+		elementsUtilities = new ElementsUtilities(driver);
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -19,11 +24,10 @@ public class AboutUsPage {
 	private WebElement aboutUsBreadcrumb;
 	
 	
-	
-	
+
 	
 	public boolean verifyAboutUsBreadCrumb(){
-		return aboutUsBreadcrumb.isDisplayed();
+		return elementsUtilities.isElementDisplayed(aboutUsBreadcrumb);
 	}
 	
 	

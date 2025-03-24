@@ -1,16 +1,18 @@
 package Pages;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.*;
+import Pages.root.RootPage;
+import utils.ElementsUtilities;
 
-public class AccountPage {
+public class AccountPage extends RootPage{
 	
-	WebDriver driver;
-	
+	ElementsUtilities elementsUtilities;
+
 	public AccountPage(WebDriver driver){
+		super(driver);
 		this.driver = driver;
+		elementsUtilities = new ElementsUtilities(driver);
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -34,42 +36,41 @@ public class AccountPage {
 	
 	
 	
-	
-	
+
 	
 	public String verifyUpdationSuccessfulMessage() {
-		return updationSuccessMessage.getText();
+		return elementsUtilities.getTextOfElements(updationSuccessMessage);
 	}
 	
 	public ChangePasswordPage clickOnChangeYourPasswordLink() {
-		changeYourPassword.click();
+		elementsUtilities.clickOnElement(changeYourPassword);
 		return new ChangePasswordPage(driver);
 	}
 	
 	public boolean didWeNavigateToAccountPage() {
-		return editYourAccountInformationOption.isDisplayed();
+		return elementsUtilities.isElementDisplayed(editYourAccountInformationOption);
 	}
 	
 	public NewsletterPage clickOnSubscribeUnsubscribeNewsLetter() {
-		subscribeUnsubscribeNewsLetter.click();
+		elementsUtilities.clickOnElement(subscribeUnsubscribeNewsLetter);
 		return new NewsletterPage(driver);
 	}
 	
 	public boolean verifyNewsletterUpdationSuccessfulMessage() {
-		return newsletterUpdationSuccessfulMessage.isDisplayed();
+		return elementsUtilities.isElementDisplayed(newsletterUpdationSuccessfulMessage);
 	}
 	
 	public EditAccountInformationPage clickEditYourAccountInformationOption() {
-		 editYourAccountInformationOption.click();
+		elementsUtilities.clickOnElement(editYourAccountInformationOption);
 		 return new EditAccountInformationPage(driver);
 	}
 	
 	public boolean isUserLoggedIn() {
-		return logoutOption.isDisplayed();
+		return elementsUtilities.isElementDisplayed(logoutOption);
 	}
 	
 	public AccountLogoutPage clickOnLogoutOption() {
-		logoutOption.click();
+		elementsUtilities.clickOnElement(logoutOption);
 		return new AccountLogoutPage(driver);
 	}
 }
